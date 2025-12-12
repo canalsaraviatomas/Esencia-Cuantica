@@ -1,27 +1,21 @@
-# Esencia Cuántica — Página estática
+# Esencia-Cuantica - Sitio web (vanilla HTML/CSS/JS)
 
-Pequeña web estática que presenta la perfumería biodinámica y vibracional "Esencia Cuántica".
+Proyecto generado: sitio web estático para la perfumería de autor "Esencia Cuántica".
 
-Archivos:
+Archivos principales:
 
-- `index.html` — página principal con manifiesto, sobre Flavia, productos y contacto.
-- `styles.css` — estilos sencillos y responsivos.
+- `index.html` - Estructura completa y texto exacto provisto.
+- `styles.css` - Estilos mobile-first, minimalista y botánico.
+- `script.js` - Interactividad: menú, acordeones, parallax y fade-in.
+- `assets/img/` - Carpeta para imágenes (placeholder `.gitkeep`).
 
-Cómo ver la página:
+Cómo usar:
 
-1. Abre el archivo `index.html` en tu navegador (doble clic o abrir con).
-2. Para edición, abre ambos archivos en tu editor y modifica el contenido (por ejemplo, reemplaza los enlaces de música y el email en la sección de contacto).
+- Abrir `index.html` en un navegador moderno.
+- Reemplazar `img[data-img]` agregando la ruta en el atributo `data-img` para cargar fotos.
+- Colocar QR en los elementos `.qr-placeholder` usando `data-qr` con la URL.
 
-Notas y pasos siguientes sugeridos:
+Notas:
 
-- Reemplazar los enlaces placeholder de Spotify/QR por enlaces reales.
-- Añadir imágenes (flores, procesos) en una carpeta `assets/` y referenciarlas en `index.html`.
-- Para publicar online: subir todo a Netlify, GitHub Pages o similar.
-
-Contacto:
-
-Reemplaza el email y los enlaces en `index.html` por tus datos reales antes de compartir públicamente.
-
----
-
-Creado para Flavia Esther Saravia Sánchez — Esencia Cuántica.
+- Todo implementado en JS vanilla, sin librerías externas.
+- El contenido textual fue incluido exactamente como se pidió.
