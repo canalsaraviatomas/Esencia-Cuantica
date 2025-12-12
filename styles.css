@@ -1,0 +1,95 @@
+:root {
+  --bg: #fffaf6;
+  --card: #ffffff;
+  --accent: #7b5e7b;
+  --muted: #6b6b6b;
+  --accent-2: #cfa6c9;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  margin: 0;
+  background: var(--bg);
+  color: #222;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.site-header {
+  background: linear-gradient(180deg, var(--accent-2), transparent);
+  padding: 28px 0;
+  text-align: center;
+}
+.brand {
+  margin: 0;
+  font-family: "Georgia", serif;
+  font-size: 2rem;
+  color: var(--accent);
+}
+.tagline {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+.hero {
+  margin: 24px 0;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+}
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 18px;
+  margin: 18px 0;
+  box-shadow: 0 6px 18px rgba(80, 60, 80, 0.06);
+}
+h2,
+h3 {
+  color: var(--accent);
+}
+ul {
+  padding-left: 1.1em;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.product {
+  background: linear-gradient(
+    180deg,
+    rgba(207, 166, 201, 0.06),
+    rgba(255, 255, 255, 0.2)
+  );
+  padding: 12px;
+  border-radius: 8px;
+}
+.note {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.contact a {
+  color: var(--accent);
+}
+.site-footer {
+  margin-top: 28px;
+  padding: 20px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 520px) {
+  .brand {
+    font-size: 1.5rem;
+  }
+  .container {
+    padding: 16px;
+  }
+}
