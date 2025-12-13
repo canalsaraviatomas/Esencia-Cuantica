@@ -3,12 +3,17 @@
   --bg: #fbfaf7;
   --card: #fff;
   --muted: #6b6b6b;
-  --accent: #6b8e6b; /* subtle green */
-  --accent-2: #8a6b6b; /* warm accent */
+  --accent: #9b8cf6; /* soft lilac */
+  --accent-2: #6f4bd8; /* deep lilac */
   --glass: rgba(255, 255, 255, 0.6);
   --shadow: 0 6px 18px rgba(17, 17, 17, 0.06);
   --radius: 14px;
   --max-width: 1100px;
+}
+/* Typography scale */
+:root {
+  --type-base: 16px;
+  --type-scale: 1.125; /* modular scale */
 }
 * {
   box-sizing: border-box;
@@ -19,7 +24,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial;
   background: var(--bg);
   color: #111;
@@ -43,6 +48,7 @@ body {
     rgba(255, 255, 255, 0.6)
   );
   backdrop-filter: blur(6px);
+  transition: box-shadow 180ms ease, background 200ms ease;
 }
 .header-inner {
   display: flex;
@@ -51,9 +57,14 @@ body {
   padding: 12px 0;
 }
 .logo-box {
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.logo-box .brand-mark {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
   background: linear-gradient(135deg, #fff, #f7f7f5);
   display: flex;
   align-items: center;
@@ -61,6 +72,11 @@ body {
   font-weight: 700;
   color: var(--muted);
   box-shadow: var(--shadow);
+}
+.logo-box .brand-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: #222;
 }
 .main-nav {
   position: relative;
@@ -75,9 +91,20 @@ body {
 .nav-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  display: none; /* mobile: hidden until opened */
+  gap: 8px;
+  position: absolute;
+  right: 12px;
+  top: calc(100% + 8px);
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(17, 17, 17, 0.08);
+  flex-direction: column;
+  min-width: 180px;
+}
+.nav-list.open {
   display: flex;
-  gap: 14px;
 }
 .nav-list a {
   display: inline-block;
@@ -89,38 +116,92 @@ body {
 .nav-list a:hover {
   background: var(--glass);
 }
+.nav-list a:focus {
+  outline: 3px solid rgba(107, 142, 107, 0.12);
+}
+.site-header.scrolled {
+  box-shadow: 0 6px 22px rgba(17, 17, 17, 0.08);
+}
 .hero {
   position: relative;
-  padding: 40px 0 28px;
+  padding: 56px 0 42px;
 }
 .hero-inner {
   padding: 18px 0;
+  display: grid;
+  gap: 8px;
 }
 .hero-title {
-  font-size: 20px;
-  margin: 0 0 8px;
-  font-weight: 700;
+  font-size: 24px;
+  margin: 0 0 6px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 .hero-sub {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
 }
+.hero-cta {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(107, 142, 107, 0.12);
+}
+
+.hero-inner {
+  max-width: 860px;
+}
 .hero-bg {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: radial-gradient(
+  background-image: linear-gradient(
+      180deg,
+      rgba(111, 75, 216, 0.18),
+      rgba(155, 140, 246, 0.06)
+    ),
+    radial-gradient(
       circle at 10% 20%,
-      rgba(138, 107, 107, 0.06),
+      rgba(155, 140, 246, 0.08),
       transparent 20%
     ),
-    linear-gradient(
-      180deg,
-      rgba(107, 142, 107, 0.04),
-      rgba(255, 255, 255, 0.02)
-    );
+    url("assets/img/FlaviaJuntoFloresPanoramica.jpeg");
+  background-size: cover, cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   transform: translateZ(0);
+}
+
+/* Manifiesto grid: imagen + texto */
+.manifiesto-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.manifiesto-photo img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+.manifiesto-text p {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+@media (min-width: 900px) {
+  .manifiesto-grid {
+    grid-template-columns: 340px 1fr;
+  }
 }
 .section {
   padding: 28px 0;
@@ -159,7 +240,7 @@ body {
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   color: white;
   border-color: transparent;
-  box-shadow: 0 8px 20px rgba(107, 142, 107, 0.12);
+  box-shadow: 0 8px 20px rgba(111, 75, 216, 0.12);
 }
 
 /* Grid of featured products */
@@ -210,6 +291,12 @@ body {
 }
 .manifiesto-text {
   white-space: pre-wrap;
+  background: var(--card);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  line-height: 1.6;
+  color: #222;
 }
 /* Accordion */
 .accordion-item {
@@ -225,6 +312,22 @@ body {
   border-radius: 10px;
   font-weight: 600;
   font-size: 15px;
+}
+.accordion-toggle {
+  position: relative;
+}
+.accordion-toggle::after {
+  content: "\25BC";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 220ms ease;
+  font-size: 12px;
+  color: var(--muted);
+}
+.accordion-toggle.is-open::after {
+  transform: translateY(-50%) rotate(180deg);
 }
 .accordion-toggle:hover,
 .sub-toggle:hover {
@@ -299,6 +402,9 @@ body {
   display: inline-block;
   margin-top: 8px;
 }
+.qr-placeholder:empty {
+  opacity: 0.6;
+}
 .card.featured {
   border: 2px solid var(--accent);
   padding: 14px;
@@ -323,7 +429,19 @@ body {
 }
 .footer-inner {
   display: flex;
-  justify-content: center;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-inner .legal {
+  color: var(--muted);
+  font-size: 13px;
+}
+.footer-inner nav a {
+  color: #222;
+  text-decoration: none;
+  margin-left: 8px;
 }
 /* Fade-in */
 .fade-in {
@@ -340,6 +458,92 @@ body {
 @media (min-width: 700px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
+
+    /* Section titles */
+    .section-title {
+      text-align: center;
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+    .section-subtitle {
+      text-align: center;
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* Collections intro nav */
+    .collections-intro {
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .collections-nav {
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .collection-link {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Alquimia intro card */
+    .alquimia-intro {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+    .alquimia-photo img {
+      width: 140px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .alquimia-intro-text p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Consultoría card */
+    .consultoria-card {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 14px;
+    }
+    .consultoria-photo img {
+      width: 140px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .consultoria-body p {
+      margin: 0 0 8px;
+    }
+    .cta {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (min-width: 900px) {
+      .consultoria-card,
+      .alquimia-intro {
+        max-width: 920px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
   .alquimia-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -349,6 +553,15 @@ body {
   }
   .nav-toggle {
     display: none;
+  }
+  .nav-list {
+    display: flex;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    gap: 14px;
+    flex-direction: row;
   }
 }
 @media (min-width: 1000px) {

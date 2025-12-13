@@ -1,12 +1,24 @@
 // script.js - vanilla JS interactivity for Esencia Cuántica
 document.addEventListener("DOMContentLoaded", function () {
-  // Mobile nav toggle
+  // Mobile nav toggle (with aria and outside click close)
   const navToggle = document.querySelector(".nav-toggle");
   const navList = document.querySelector(".nav-list");
-  navToggle &&
-    navToggle.addEventListener("click", () => {
-      navList.classList.toggle("open");
+  if (navToggle && navList) {
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.addEventListener("click", (e) => {
+      const open = navList.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      e.stopPropagation();
     });
+    // close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!navList.classList.contains("open")) return;
+      if (!navList.contains(e.target) && !navToggle.contains(e.target)) {
+        navList.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
 
   // Sticky header shadow on scroll
   const header = document.getElementById("site-header");
@@ -31,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function setupAccordion(containerSelector, toggleSelector, panelSelector) {
     const toggles = document.querySelectorAll(toggleSelector);
     toggles.forEach((btn) => {
+      // set initial aria state
+      btn.setAttribute("aria-expanded", "false");
       btn.addEventListener("click", () => {
         const panel = btn.nextElementSibling;
         if (!panel) return;
@@ -40,12 +54,22 @@ document.addEventListener("DOMContentLoaded", function () {
           .map((t) => t.nextElementSibling)
           .filter((p) => p !== panel);
         siblings.forEach((s) => {
+          if (!s) return;
           s.style.maxHeight = null;
+          const tb = s.previousElementSibling;
+          if (tb) {
+            tb.classList.remove("is-open");
+            tb.setAttribute("aria-expanded", "false");
+          }
         });
         if (isOpen) {
           panel.style.maxHeight = null;
+          btn.classList.remove("is-open");
+          btn.setAttribute("aria-expanded", "false");
         } else {
           panel.style.maxHeight = panel.scrollHeight + "px";
+          btn.classList.add("is-open");
+          btn.setAttribute("aria-expanded", "true");
         }
       });
     });
@@ -146,4 +170,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  // Footer year dynamic
+  const yEl = document.getElementById("year");
+  if (yEl) yEl.textContent = new Date().getFullYear();
 });
