@@ -578,3 +578,80 @@ body {
     font-size: 26px;
   }
 }
+
+/* Overrides: improve hero contrast and add subtle accents */
+.hero {
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 6, 20, 0.62),
+    rgba(111, 75, 216, 0.24)
+  );
+  pointer-events: none;
+}
+.hero-inner {
+  position: relative;
+  z-index: 2;
+}
+.hero-title {
+  color: #fff;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+.hero-sub {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Collection link styling */
+.collection-link {
+  box-shadow: 0 8px 18px rgba(111, 75, 216, 0.1);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.collection-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(111, 75, 216, 0.14);
+}
+
+/* Accordion visual accent */
+.accordion-toggle {
+  position: relative;
+  padding-left: 18px;
+}
+.accordion-toggle::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  opacity: 0.95;
+}
+.accordion-toggle.is-open::before {
+  box-shadow: 0 6px 20px rgba(111, 75, 216, 0.12);
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* Manifiesto centering */
+.manifiesto-grid {
+  align-items: center;
+}
+.manifiesto-text {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.manifiesto-photo img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
