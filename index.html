@@ -43,6 +43,101 @@
         <div class="hero-bg" aria-hidden="true"></div>
       </section>
 
+      <!-- Nueva sección: Perfumes destacadas con filtros de categoría -->
+      <section id="perfumes" class="section perfumes container fade-in">
+        <h2>Perfumes</h2>
+        <p class="section-sub">
+          Explora por categoría o descubre nuestras fragancias destacadas.
+        </p>
+
+        <div class="filter-bar" role="tablist" aria-label="Filtrar perfumes">
+          <button class="filter-btn active" data-filter="all" role="tab">
+            Todo
+          </button>
+          <button class="filter-btn" data-filter="luz-de-luna" role="tab">
+            Luz de Luna
+          </button>
+          <button class="filter-btn" data-filter="naturaleza" role="tab">
+            Naturaleza
+          </button>
+          <button class="filter-btn" data-filter="macrocosmos" role="tab">
+            Macro/Microcosmos
+          </button>
+          <button class="filter-btn" data-filter="diosas" role="tab">
+            Diosas
+          </button>
+          <button class="filter-btn" data-filter="dioses" role="tab">
+            Dioses
+          </button>
+          <button class="filter-btn" data-filter="armonizacion" role="tab">
+            Armonización
+          </button>
+        </div>
+
+        <div class="product-grid" aria-live="polite">
+          <!-- Ejemplos de productos - cada card tiene data-category para filtrado -->
+          <article class="product-card" data-category="luz-de-luna">
+            <div class="product-media">
+              <img alt="Sabiduría Ancestral" data-img="" />
+            </div>
+            <div class="product-body">
+              <h4>Sabiduría Ancestral</h4>
+              <p class="muted">Luz de Luna — inicio reflexivo</p>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="naturaleza">
+            <div class="product-media">
+              <img alt="Bosque encantado" data-img="" />
+            </div>
+            <div class="product-body">
+              <h4>Bosque Encantado</h4>
+              <p class="muted">Naturaleza — notas verdes y terrosas</p>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="macrocosmos">
+            <div class="product-media">
+              <img alt="Cristal" data-img="" />
+            </div>
+            <div class="product-body">
+              <h4>Cristal</h4>
+              <p class="muted">Macrocosmos — calma majestuosa</p>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="diosas">
+            <div class="product-media">
+              <img alt="Jaizlan" data-img="" />
+            </div>
+            <div class="product-body">
+              <h4>Jaizlan</h4>
+              <p class="muted">Diosas — presencia y misterio</p>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="dioses">
+            <div class="product-media">
+              <img alt="Liró" data-img="" />
+            </div>
+            <div class="product-body">
+              <h4>Liró</h4>
+              <p class="muted">Dioses — energía y fuerza</p>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="armonizacion">
+            <div class="product-media">
+              <img alt="Perfume Armonía" data-img="" />
+            </div>
+            <div class="product-body">
+              <h4>Armonía</h4>
+              <p class="muted">Armonización vibracional</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section id="manifiesto" class="section manifiesto container fade-in">
         <h2>Manifiesto / Presentación</h2>
         <h3>Esencia Cuántica – La mágica esencia de todo</h3>

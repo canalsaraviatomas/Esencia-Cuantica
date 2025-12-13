@@ -130,6 +130,84 @@ body {
   margin: 0 0 12px;
   font-size: 18px;
 }
+.section-sub {
+  margin: 6px 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Filter bar for product categories */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.filter-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #222;
+}
+.filter-btn:hover {
+  background: var(--glass);
+}
+.filter-btn.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 20px rgba(107, 142, 107, 0.12);
+}
+
+/* Grid of featured products */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.product-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: var(--card);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.08);
+}
+.product-media {
+  width: 96px;
+  height: 96px;
+  flex: 0 0 96px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fafafa, #f3f3f3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.product-body h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+.product-body .muted {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
 .manifiesto-text {
   white-space: pre-wrap;
 }
@@ -266,6 +344,9 @@ body {
   .alquimia-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .nav-toggle {
     display: none;
   }
@@ -275,6 +356,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
   .alquimia-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .product-grid {
     grid-template-columns: repeat(3, 1fr);
   }
   .hero-title {

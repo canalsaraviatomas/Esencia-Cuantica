@@ -115,4 +115,35 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Filtrado de productos por categoría (sección Perfumes)
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const productCards = document.querySelectorAll(".product-card");
+  if (filterBtns.length && productCards.length) {
+    filterBtns.forEach((btn) => {
+      // keyboard accessibility
+      btn.setAttribute("tabindex", "0");
+      btn.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+        filterBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        productCards.forEach((card) => {
+          const cat = card.dataset.category || "";
+          if (filter === "all" || cat === filter) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  }
 });
