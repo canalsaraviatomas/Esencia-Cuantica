@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Esencia Cuántica – La mágica esencia de todo</title>
+    <title>Esencia Cuántica</title>
+    <link rel="icon" href="assets/img/Logo.png" />
+    <link rel="apple-touch-icon" href="assets/img/Logo.png" />
     <link rel="stylesheet" href="styles.css" />
     <meta
       name="description"
@@ -44,110 +46,9 @@
           <p class="hero-sub">
             Perfumería de autor, artesanal, terapéutica y vibracional.
           </p>
-          <a class="hero-cta" href="#perfumes">Explorar perfumes</a>
+          <a class="hero-cta" href="#colecciones">Explorar perfumes</a>
         </div>
         <div class="hero-bg" aria-hidden="true"></div>
-      </section>
-
-      <!-- Nueva sección: Perfumes destacadas con filtros de categoría -->
-      <section id="perfumes" class="section perfumes container fade-in">
-        <h2>Perfumes</h2>
-        <p class="section-sub">
-          Explora por categoría o descubre nuestras fragancias destacadas.
-        </p>
-
-        <div class="filter-bar" role="tablist" aria-label="Filtrar perfumes">
-          <button class="filter-btn active" data-filter="all" role="tab">
-            Todo
-          </button>
-          <button class="filter-btn" data-filter="luz-de-luna" role="tab">
-            Luz de Luna
-          </button>
-          <button class="filter-btn" data-filter="naturaleza" role="tab">
-            Naturaleza
-          </button>
-          <button class="filter-btn" data-filter="macrocosmos" role="tab">
-            Macro/Microcosmos
-          </button>
-          <button class="filter-btn" data-filter="diosas" role="tab">
-            Diosas
-          </button>
-          <button class="filter-btn" data-filter="dioses" role="tab">
-            Dioses
-          </button>
-          <button class="filter-btn" data-filter="armonizacion" role="tab">
-            Armonización
-          </button>
-        </div>
-
-        <div class="product-grid" aria-live="polite">
-          <!-- Ejemplos de productos - cada card tiene data-category para filtrado -->
-          <article class="product-card" data-category="luz-de-luna">
-            <div class="product-media">
-              <img
-                alt="Sabiduría Ancestral"
-                data-img="assets/img/Perfume.jpeg"
-              />
-            </div>
-            <div class="product-body">
-              <h4>Sabiduría Ancestral</h4>
-              <p class="muted">Luz de Luna — inicio reflexivo</p>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="naturaleza">
-            <div class="product-media">
-              <img
-                alt="Bosque encantado"
-                data-img="assets/img/PerfumesEnNaturaleza.jpeg"
-              />
-            </div>
-            <div class="product-body">
-              <h4>Bosque Encantado</h4>
-              <p class="muted">Naturaleza — notas verdes y terrosas</p>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="macrocosmos">
-            <div class="product-media">
-              <img alt="Cristal" data-img="assets/img/Perfumes3.jpeg" />
-            </div>
-            <div class="product-body">
-              <h4>Cristal</h4>
-              <p class="muted">Macrocosmos — calma majestuosa</p>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="diosas">
-            <div class="product-media">
-              <img alt="Jaizlan" data-img="assets/img/Perfumes2.jpeg" />
-            </div>
-            <div class="product-body">
-              <h4>Jaizlan</h4>
-              <p class="muted">Diosas — presencia y misterio</p>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="dioses">
-            <div class="product-media">
-              <img alt="Liró" data-img="assets/img/PerfumeArtesanal.jpeg" />
-            </div>
-            <div class="product-body">
-              <h4>Liró</h4>
-              <p class="muted">Dioses — energía y fuerza</p>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="armonizacion">
-            <div class="product-media">
-              <img alt="Perfume Armonía" data-img="assets/img/Perfumes.jpeg" />
-            </div>
-            <div class="product-body">
-              <h4>Armonía</h4>
-              <p class="muted">Armonización vibracional</p>
-            </div>
-          </article>
-        </div>
       </section>
 
       <section id="manifiesto" class="section manifiesto container fade-in">
@@ -181,8 +82,11 @@
       <section id="colecciones" class="section colecciones container fade-in">
         <h2 class="section-title">Colecciones</h2>
         <p class="section-sub">
-          Explora nuestras colecciones: cada una contiene subgrupos y fragancias
-          diseñadas para distintos momentos y procesos.
+          Aquí las colecciones son las familias de perfumes: cada colección
+          principal (por ejemplo Frecuencia Sonora, Jardín Sagrado, Armonización
+          Vibracional e Intención y Resonancia) agrupa fragancias y subgrupos
+          relacionados. Cada colección incluye una descripción que orienta su
+          uso, intención y el tipo de experiencias que propone.
         </p>
 
         <div class="collections-intro">
@@ -200,461 +104,335 @@
           </nav>
         </div>
 
-        <div class="accordion" id="collections-acc">
-          <!-- Primera colección -->
-          <div class="accordion-item">
-            <button id="collection-1" class="accordion-toggle">
-              1) Primera colección — Frecuencia Sonora
-            </button>
-            <div class="accordion-panel">
-              <p class="collection-desc">
-                el perfume como soundtrack vibracional…
-              </p>
+        <!-- Colecciones integradas: cada sección principal incluye su imagen y descripción -->
 
-              <div class="sub-accordion">
-                <button class="sub-toggle">
-                  A – Luz de Luna (Kit terapéutico)
-                </button>
-                <div class="sub-panel">
-                  <div class="cards">
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Luz de Luna - Sabiduría Ancestral"
-                          data-img="assets/img/Perfume.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Sabiduría Ancestral</h4>
-                        <p>Inicia la fase reflexiva</p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
+        <div class="collections-list">
+          <section id="collection-1" class="collection-section">
+            <div class="collection-header">
+              <div class="collection-media">
+                <img src="assets/img/LuzDeLuna.jpg" alt="Frecuencia Sonora" />
+              </div>
+              <div class="collection-header-body">
+                <h3>Frecuencia Sonora</h3>
+                <p class="collection-desc">
+                  El perfume como soundtrack vibracional: fórmulas y kits que
+                  combinan botánica e intencionalidad sonora.
+                </p>
+              </div>
+            </div>
 
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Luz de Luna - Fuerza Vital"
-                          data-img="assets/img/Perfumes.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Fuerza Vital</h4>
-                        <p>Fuerza, accion y proyección</p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
+            <div class="collection-subgroups">
+              <div class="subgroup">
+                <h4>Luz de Luna (Kit terapéutico)</h4>
+                <div class="cards">
+                  <article class="card">
+                    <div class="card-media">
+                      <img
+                        alt="Sabiduría Ancestral"
+                        data-img="assets/img/Perfume.jpeg"
+                      />
+                    </div>
+                    <div class="card-body">
+                      <h4>Sabiduría Ancestral</h4>
+                      <p>Inicia la fase reflexiva</p>
+                    </div>
+                  </article>
 
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Luz de Luna - Expansion Plena"
-                          data-img="assets/img/Perfumes2.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Expansion Plena</h4>
-                        <p>fase de crecimiento y abundancia</p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
+                  <article class="card">
+                    <div class="card-media">
+                      <img
+                        alt="Fuerza Vital"
+                        data-img="assets/img/Perfumes.jpeg"
+                      />
+                    </div>
+                    <div class="card-body">
+                      <h4>Fuerza Vital</h4>
+                      <p>Fuerza, acción y proyección</p>
+                    </div>
+                  </article>
 
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Luz de Luna - Magia Mistica"
-                          data-img="assets/img/Perfumes3.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Magia Mistica</h4>
-                        <p>fase de culminacion y reconexion</p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-                  </div>
+                  <article class="card">
+                    <div class="card-media">
+                      <img
+                        alt="Expansion Plena"
+                        data-img="assets/img/Perfumes2.jpeg"
+                      />
+                    </div>
+                    <div class="card-body">
+                      <h4>Expansión Plena</h4>
+                      <p>Fase de crecimiento y abundancia</p>
+                    </div>
+                  </article>
+
+                  <article class="card">
+                    <div class="card-media">
+                      <img
+                        alt="Magia Mística"
+                        data-img="assets/img/Perfumes3.jpeg"
+                      />
+                    </div>
+                    <div class="card-body">
+                      <h4>Magia Mística</h4>
+                      <p>Fase de culminación y reconexión</p>
+                    </div>
+                  </article>
                 </div>
+              </div>
 
-                <button class="sub-toggle">B – Naturaleza</button>
-                <div class="sub-panel">
-                  <div class="cards">
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Bosque encantando"
-                          data-img="assets/img/PerfumesEnNaturaleza.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Bosque encantando</h4>
-                        <p>Dulzura cautivante</p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
+              <div class="subgroup">
+                <h4>Naturaleza</h4>
+                <div class="cards">
+                  <article class="card">
+                    <div class="card-media">
+                      <img
+                        alt="Bosque encantado"
+                        data-img="assets/img/PerfumesEnNaturaleza.jpeg"
+                      />
+                    </div>
+                    <div class="card-body">
+                      <h4>Bosque Encantado</h4>
+                      <p>Dulzura cautivante</p>
+                    </div>
+                  </article>
 
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Corazon de bosque"
-                          data-img="assets/img/Flore.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Corazon de bosque</h4>
-                        <p>
-                          torbellino de sensaciones silvestres, marinas y
-                          terrosas. Da paso a la templanza / calma
-                        </p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
+                  <article class="card">
+                    <div class="card-media">
+                      <img
+                        alt="Corazón de bosque"
+                        data-img="assets/img/Flores.jpeg"
+                      />
+                    </div>
+                    <div class="card-body">
+                      <h4>Corazón de Bosque</h4>
+                      <p>
+                        Torbellino de sensaciones silvestres, marinas y
+                        terrosas.
+                      </p>
+                    </div>
+                  </article>
 
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Magico encanto"
-                          data-img="assets/img/Perfumes2.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Magico encanto</h4>
-                        <p>Dulce, suave y sutil</p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Soleado Amanecer"
-                          data-img="assets/img/FlaviaJuntoFlores.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Soleado Amanecer</h4>
-                        <p>Frescura que me eleva y despierta</p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="La vid"
-                          data-img="assets/img/FlaviaSacandoFlores.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>La vid</h4>
-                        <p>Uva dulce vibrante y acida</p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-                  </div>
+                  <article class="card">
+                    <div class="card-media">
+                      <img
+                        alt="Mágico encanto"
+                        data-img="assets/img/PerfumesEnNaturaleza2.jpeg"
+                      />
+                    </div>
+                    <div class="card-body">
+                      <h4>Mágico Encanto</h4>
+                      <p>Dulce, suave y sutil</p>
+                    </div>
+                  </article>
                 </div>
+              </div>
 
-                <button class="sub-toggle">
-                  C – Macrocosmos / Microcosmos
-                </button>
-                <div class="sub-panel">
-                  <div class="cards">
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Cristal"
-                          data-img="assets/img/Perfumes3.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Cristal</h4>
-                        <p>Majestuosa calma…</p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
+              <div class="subgroup">
+                <h4>Macrocosmos / Microcosmos</h4>
+                <div class="cards">
+                  <article class="card">
+                    <div class="card-media">
+                      <img alt="Cristal" data-img="assets/img/Perfumes3.jpeg" />
+                    </div>
+                    <div class="card-body">
+                      <h4>Cristal</h4>
+                      <p>Majestuosa calma</p>
+                    </div>
+                  </article>
 
-                    <article class="card">
-                      <div class="card-media">
-                        <img alt="Rua" data-img="assets/img/Perfumes2.jpeg" />
-                      </div>
-                      <div class="card-body">
-                        <h4>Ruá</h4>
-                        <p></p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Alba azul"
-                          data-img="assets/img/PerfumeArtesanal.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Alba azul</h4>
-                        <p></p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Suspiro Terrenal"
-                          data-img="assets/img/Perfume.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Suspiro Terrenal</h4>
-                        <p></p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-                  </div>
+                  <article class="card">
+                    <div class="card-media">
+                      <img
+                        alt="Ruá"
+                        data-img="assets/img/PerfumesEnNaturalezaPanoramica.jpeg"
+                      />
+                    </div>
+                    <div class="card-body">
+                      <h4>Ruá</h4>
+                      <p></p>
+                    </div>
+                  </article>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <!-- Segunda colección -->
-          <div class="accordion-item">
-            <button id="collection-2" class="accordion-toggle">
-              2) Segunda colección — Jardín Sagrado
-            </button>
-            <div class="accordion-panel">
-              <div class="sub-accordion">
-                <button class="sub-toggle">A – Diosas</button>
-                <div class="sub-panel">
-                  <div class="cards">
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Jaizlan"
-                          data-img="assets/img/Perfumes2.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Jaizlan…</h4>
-                        <p></p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Merlina"
-                          data-img="assets/img/Perfumes3.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Merlina…</h4>
-                        <p></p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-                    <article class="card">
-                      <div class="card-media">
-                        <img alt="Ninué" data-img="assets/img/Perfumes.jpeg" />
-                      </div>
-                      <div class="card-body">
-                        <h4>Ninué…</h4>
-                        <p></p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Dulcine"
-                          data-img="assets/img/FlaviaMeditando.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Dulcine…</h4>
-                        <p></p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-                  </div>
+          <section id="collection-2" class="collection-section">
+            <div class="collection-header">
+              <div class="collection-media">
+                <img src="assets/img/MasFlores.jpg" alt="Jardín Sagrado" />
+              </div>
+              <div class="collection-header-body">
+                <h3>Jardín Sagrado</h3>
+                <p class="collection-desc">
+                  Colección botánica: notas florales y territorios sensoriales
+                  inspirados en el jardín.
+                </p>
+              </div>
+            </div>
+
+            <div class="collection-subgroups">
+              <div class="subgroup">
+                <h4>Diosas</h4>
+                <div class="cards">
+                  <article class="card">
+                    <div class="card-media">
+                      <img
+                        alt="Jaizlan"
+                        data-img="assets/img/PerfumesEnNaturalezaPanoramica.jpeg"
+                      />
+                    </div>
+                    <div class="card-body">
+                      <h4>Jaizlan</h4>
+                    </div>
+                  </article>
+
+                  <article class="card">
+                    <div class="card-media">
+                      <img
+                        alt="Merlina"
+                        data-img="assets/img/FlaviaJuntoFlores.jpeg"
+                      />
+                    </div>
+                    <div class="card-body">
+                      <h4>Merlina</h4>
+                    </div>
+                  </article>
                 </div>
+              </div>
 
-                <button class="sub-toggle">B – Dioses</button>
-                <div class="sub-panel">
-                  <div class="cards">
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="Liro"
-                          data-img="assets/img/PerfumeArtesanal.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Liró</h4>
-                        <p></p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-                    <article class="card">
-                      <div class="card-media">
-                        <img alt="Aon" data-img="assets/img/Perfume.jpeg" />
-                      </div>
-                      <div class="card-body">
-                        <h4>Aon</h4>
-                        <p></p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-                    <article class="card">
-                      <div class="card-media">
-                        <img alt="Ovix" data-img="assets/img/Perfumes.jpeg" />
-                      </div>
-                      <div class="card-body">
-                        <h4>Ovix</h4>
-                        <p></p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-                  </div>
+              <div class="subgroup">
+                <h4>Dioses</h4>
+                <div class="cards">
+                  <article class="card">
+                    <div class="card-media">
+                      <img
+                        alt="Liró"
+                        data-img="assets/img/PerfumeArtesanal.jpeg"
+                      />
+                    </div>
+                    <div class="card-body">
+                      <h4>Liró</h4>
+                    </div>
+                  </article>
+
+                  <article class="card">
+                    <div class="card-media">
+                      <img
+                        alt="Ovix"
+                        data-img="assets/img/PerfumesEnNaturaleza2.jpeg"
+                      />
+                    </div>
+                    <div class="card-body">
+                      <h4>Ovix</h4>
+                    </div>
+                  </article>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <!-- Tercera colección -->
-          <div class="accordion-item">
-            <button id="collection-3" class="accordion-toggle">
-              3) Tercera colección — Armonización Vibracional
-            </button>
-            <div class="accordion-panel">
-              <p class="collection-desc">
-                Perfumes 1 al 7 (mantener descripciones exactas).
-              </p>
-              <div class="cards">
-                <!-- placeholders for 7 perfumes; descripciones pendientes de carga exacta -->
-                <article class="card">
-                  <div class="card-media">
-                    <img alt="Perfume 1" data-img="assets/img/Perfume.jpeg" />
-                  </div>
-                  <div class="card-body">
-                    <h4></h4>
-                    <p data-desc=""></p>
-                    <div class="qr-placeholder" data-qr=""></div>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="card-media">
-                    <img alt="Perfume 2" data-img="assets/img/Perfumes.jpeg" />
-                  </div>
-                  <div class="card-body">
-                    <h4></h4>
-                    <p data-desc=""></p>
-                    <div class="qr-placeholder" data-qr=""></div>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="card-media">
-                    <img alt="Perfume 3" data-img="assets/img/Perfumes2.jpeg" />
-                  </div>
-                  <div class="card-body">
-                    <h4></h4>
-                    <p data-desc=""></p>
-                    <div class="qr-placeholder" data-qr=""></div>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="card-media">
-                    <img alt="Perfume 4" data-img="assets/img/Perfumes3.jpeg" />
-                  </div>
-                  <div class="card-body">
-                    <h4></h4>
-                    <p data-desc=""></p>
-                    <div class="qr-placeholder" data-qr=""></div>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="card-media">
-                    <img
-                      alt="Perfume 5"
-                      data-img="assets/img/PerfumeArtesanal.jpeg"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4></h4>
-                    <p data-desc=""></p>
-                    <div class="qr-placeholder" data-qr=""></div>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="card-media">
-                    <img alt="Perfume 6" data-img="assets/img/Perfumes.jpeg" />
-                  </div>
-                  <div class="card-body">
-                    <h4></h4>
-                    <p data-desc=""></p>
-                    <div class="qr-placeholder" data-qr=""></div>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="card-media">
-                    <img alt="Perfume 7" data-img="assets/img/Perfumes2.jpeg" />
-                  </div>
-                  <div class="card-body">
-                    <h4></h4>
-                    <p data-desc=""></p>
-                    <div class="qr-placeholder" data-qr=""></div>
-                  </div>
-                </article>
+          <section id="collection-3" class="collection-section">
+            <div class="collection-header">
+              <div class="collection-media">
+                <img
+                  src="assets/img/MacrocosmosMicrocosmos.jpg"
+                  alt="Armonización Vibracional"
+                />
+              </div>
+              <div class="collection-header-body">
+                <h3>Armonización Vibracional</h3>
+                <p class="collection-desc">
+                  Fragancias diseñadas para acompañar procesos emocionales y
+                  energéticos — 7 fórmulas principales.
+                </p>
               </div>
             </div>
-          </div>
 
-          <!-- Cuarta colección -->
-          <div class="accordion-item">
-            <button id="collection-4" class="accordion-toggle">
-              4) Cuarta colección — Intención y Resonancia
-            </button>
-            <div class="accordion-panel">
-              <div class="sub-accordion">
-                <button class="sub-toggle">Génesis</button>
-                <div class="sub-panel">
-                  <div class="cards">
-                    <article class="card featured">
-                      <div class="card-media">
-                        <img
-                          alt="Corazón Exótico"
-                          data-img="assets/img/FlaviaJuntoFloresPanoramica.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>Corazón Exótico</h4>
-                        <p></p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-                  </div>
+            <div class="cards">
+              <article class="card">
+                <div class="card-media">
+                  <img
+                    alt="Armonización 1"
+                    data-img="assets/img/LuzDeLuna.jpg"
+                  />
                 </div>
+                <div class="card-body">
+                  <h4>Armonización 1</h4>
+                  <p></p>
+                </div>
+              </article>
+              <article class="card">
+                <div class="card-media">
+                  <img
+                    alt="Armonización 2"
+                    data-img="assets/img/FlaviaSacandoFlores.jpeg"
+                  />
+                </div>
+                <div class="card-body">
+                  <h4>Armonización 2</h4>
+                  <p></p>
+                </div>
+              </article>
+              <article class="card">
+                <div class="card-media">
+                  <img
+                    alt="Armonización 3"
+                    data-img="assets/img/Flores2.jpeg"
+                  />
+                </div>
+                <div class="card-body">
+                  <h4>Armonización 3</h4>
+                  <p></p>
+                </div>
+              </article>
+            </div>
+          </section>
 
-                <button class="sub-toggle">El legado del Alma</button>
-                <div class="sub-panel">
-                  <div class="cards">
-                    <article class="card">
-                      <div class="card-media">
-                        <img
-                          alt="El legado del Alma"
-                          data-img="assets/img/Flore.jpeg"
-                        />
-                      </div>
-                      <div class="card-body">
-                        <h4>El legado del Alma</h4>
-                        <p></p>
-                        <div class="qr-placeholder" data-qr=""></div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
+          <section id="collection-4" class="collection-section">
+            <div class="collection-header">
+              <div class="collection-media">
+                <img
+                  src="assets/img/Naturaleza.jpg"
+                  alt="Intención y Resonancia"
+                />
+              </div>
+              <div class="collection-header-body">
+                <h3>Intención y Resonancia</h3>
+                <p class="collection-desc">
+                  Perfumes con intención: fórmulas para rituales, anclajes y
+                  resonancias personales.
+                </p>
               </div>
             </div>
-          </div>
+
+            <div class="cards">
+              <article class="card featured">
+                <div class="card-media">
+                  <img
+                    alt="Corazón Exótico"
+                    data-img="assets/img/Perfume.jpeg"
+                  />
+                </div>
+                <div class="card-body">
+                  <h4>Corazón Exótico</h4>
+                  <p></p>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card-media">
+                  <img
+                    alt="El legado del Alma"
+                    data-img="assets/img/Flore.jpeg"
+                  />
+                </div>
+                <div class="card-body">
+                  <h4>El legado del Alma</h4>
+                  <p></p>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
       </section>
 
@@ -667,7 +445,7 @@
 
         <div class="alquimia-intro card">
           <div class="alquimia-photo">
-            <img src="assets/img/Flore.jpeg" alt="Alquimia vegetal" />
+            <img src="assets/img/Flores.jpeg" alt="Alquimia vegetal" />
           </div>
           <div class="alquimia-intro-text">
             <p>
