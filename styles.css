@@ -459,81 +459,22 @@ body {
   padding: 6px 14px;
   color: var(--muted);
 }
-/* Collection header layout when tiles are integrated into each section */
+/* Collection header layout and improved collections styling */
 .collection-header {
   display: flex;
-  gap: 14px;
+  gap: 18px;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .collection-media {
   width: 160px;
   height: 110px;
   flex: 0 0 160px;
-  border-radius: 10px;
-
-  /* Collections list layout */
-  .collections-list {
-    display: grid;
-    gap: 18px;
-  }
-  .collection-section {
-    background: transparent;
-    padding: 12px 0 18px;
-    border-radius: 10px;
-  }
-
-  /* Cards grid: adapt to screen size */
-  .cards {
-    grid-template-columns: 1fr;
-  }
-  @media (min-width: 640px) {
-    .cards {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (min-width: 1100px) {
-    .cards {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  /* Ensure subgroup headings spacing */
-  .collection-subgroups .subgroup {
-    margin-bottom: 18px;
-  }
-  .subgroup h4 {
-    margin: 8px 0;
-  }
-
-  /* Collections navigation (inline links) */
-  .collections-nav {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 12px;
-  }
-  .collection-link {
-    text-decoration: none;
-    color: var(--accent-2);
-    font-weight: 700;
-    padding: 6px 8px;
-    border-radius: 8px;
-  }
-  .collection-link:hover {
-    background: var(--glass);
-  }
-
-  /* Tidy manifiesto image on wide screens */
-  @media (min-width: 900px) {
-    .manifiesto-photo img {
-      width: 100%;
-      height: auto;
-    }
-  }
+  border-radius: 12px;
   overflow: hidden;
   background: linear-gradient(135deg, #fafafa, #f3f3f3);
-  box-shadow: var(--shadow);
+  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 .collection-media img {
   width: 100%;
@@ -543,9 +484,55 @@ body {
 }
 .collection-header-body h3 {
   margin: 0 0 6px;
+  font-size: 18px;
 }
 .collection-header-body .collection-desc {
   margin: 0;
+  color: var(--muted);
+}
+
+.collections-list {
+  display: grid;
+  gap: 20px;
+}
+.collection-section {
+  background: linear-gradient(180deg, #ffffff, #fbfaff);
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.collection-section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(17, 17, 17, 0.06);
+}
+
+.collections-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.collection-link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  transition: background 180ms ease, color 180ms ease, transform 120ms ease;
+}
+.collection-link:hover {
+  background: rgba(111, 75, 216, 0.06);
+  color: var(--accent-2);
+  transform: translateY(-2px);
+  border-color: rgba(111, 75, 216, 0.08);
+}
+.collection-link.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  box-shadow: 0 14px 36px rgba(111, 75, 216, 0.1);
 }
 
 @media (max-width: 899px) {
@@ -558,6 +545,7 @@ body {
     height: 160px;
   }
 }
+
 .cards {
   display: grid;
   grid-template-columns: 1fr;
