@@ -82,6 +82,43 @@ document.addEventListener("DOMContentLoaded", function () {
     .querySelectorAll(".accordion-panel, .sub-panel")
     .forEach((p) => (p.style.maxHeight = null));
 
+  // Sistema de tabs para colecciones de perfumes
+  const tabBtns = document.querySelectorAll(".tab-btn");
+  const collectionTabs = document.querySelectorAll(".collection-tab");
+
+  if (tabBtns.length > 0) {
+    tabBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const tabId = btn.getAttribute("data-tab");
+
+        // Remover clase active de todos los botones y tabs
+        tabBtns.forEach((b) => {
+          b.classList.remove("active");
+          b.setAttribute("aria-selected", "false");
+        });
+        collectionTabs.forEach((tab) => {
+          tab.classList.remove("active");
+        });
+
+        // Añadir clase active al botón y tab seleccionado
+        btn.classList.add("active");
+        btn.setAttribute("aria-selected", "true");
+        const selectedTab = document.getElementById(tabId);
+        if (selectedTab) {
+          selectedTab.classList.add("active");
+        }
+      });
+
+      // Permitir navegación con teclado (Enter/Space)
+      btn.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    });
+  }
+
   // Fade-in on scroll
   const faders = document.querySelectorAll(".fade-in");
   const io = new IntersectionObserver(

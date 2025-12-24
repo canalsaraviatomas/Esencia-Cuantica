@@ -101,29 +101,69 @@
           solo viajan a través de la esencia.
         </p>
 
-        <div class="collections-intro">
-          <nav class="collections-nav" aria-label="Perfumería principal">
-            <a href="#collection-1" class="collection-link"
-              >Frecuencia Sonora</a
-            >
-            <a href="#collection-2" class="collection-link">Jardín Sagrado</a>
-            <a href="#collection-3" class="collection-link"
-              >Armonización Vibracional</a
-            >
-            <a href="#collection-4" class="collection-link"
-              >Intención y Resonancia</a
-            >
-          </nav>
+        <div class="perfumeria-real-photos">
+          <div class="real-photos-grid">
+            <img src="assets/img/PerfumesReales1.jpeg" alt="Perfume real 1" />
+            <img src="assets/img/PerfumesReales2.jpeg" alt="Perfume real 2" />
+            <img src="assets/img/PerfumesReales3.jpeg" alt="Perfume real 3" />
+          </div>
         </div>
 
-        <!-- Colecciones integradas: cada sección principal incluye su imagen y descripción -->
+        <div class="collections-intro">
+          <div
+            class="collections-tabs"
+            role="tablist"
+            aria-label="Colecciones de perfumes"
+          >
+            <button
+              class="tab-btn active"
+              data-tab="collection-1"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-collection-1"
+            >
+              Frecuencia Sonora
+            </button>
+            <button
+              class="tab-btn"
+              data-tab="collection-2"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-collection-2"
+            >
+              Jardín Sagrado
+            </button>
+            <button
+              class="tab-btn"
+              data-tab="collection-3"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-collection-3"
+            >
+              Armonización Vibracional
+            </button>
+            <button
+              class="tab-btn"
+              data-tab="collection-4"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-collection-4"
+            >
+              Intención y Resonancia
+            </button>
+          </div>
+        </div>
+
+        <!-- Sistema de tabs: una colección visible a la vez -->
 
         <div class="collections-list">
-          <section id="collection-1" class="collection-section">
+          <section
+            id="collection-1"
+            class="collection-section collection-tab active"
+            role="tabpanel"
+            aria-labelledby="tab-collection-1"
+          >
             <div class="collection-header">
-              <div class="collection-media">
-                <img src="assets/img/LuzDeLuna.jpg" alt="Frecuencia Sonora" />
-              </div>
               <div class="collection-header-body">
                 <h3>Frecuencia Sonora</h3>
                 <p class="collection-desc">
@@ -149,13 +189,20 @@
                     Escuchar canción ▶</a
                   >
                 </h4>
+                <div class="subgroup-header">
+                  <img
+                    src="assets/img/LuzDeLuna.jpeg"
+                    alt="Luz de Luna"
+                    class="subgroup-image luz-de-luna"
+                  />
+                </div>
                 <h5>El ciclo de la transmutación - Kit terapéutico</h5>
                 <div class="cards">
                   <article class="card">
                     <div class="card-media">
                       <img
                         alt="Sabiduría Ancestral"
-                        data-img="assets/img/Perfume.jpeg"
+                        data-img="assets/img/perfumeIlustrado1.png"
                       />
                     </div>
                     <div class="card-body">
@@ -168,7 +215,7 @@
                     <div class="card-media">
                       <img
                         alt="Fuerza Vital"
-                        data-img="assets/img/Perfumes.jpeg"
+                        data-img="assets/img/perfumeIlustrado2.png"
                       />
                     </div>
                     <div class="card-body">
@@ -181,7 +228,7 @@
                     <div class="card-media">
                       <img
                         alt="Expansion Plena"
-                        data-img="assets/img/Perfumes2.jpeg"
+                        data-img="assets/img/perfumeIlustrado3.png"
                       />
                     </div>
                     <div class="card-body">
@@ -194,7 +241,7 @@
                     <div class="card-media">
                       <img
                         alt="Magia Mística"
-                        data-img="assets/img/Perfumes3.jpeg"
+                        data-img="assets/img/perfumeIlustrado1.png"
                       />
                     </div>
                     <div class="card-body">
@@ -217,12 +264,19 @@
                     >Escuchar canción ▶</a
                   >
                 </h4>
+                <div class="subgroup-header">
+                  <img
+                    src="assets/img/Naturaleza.jpg"
+                    alt="Naturaleza"
+                    class="subgroup-image"
+                  />
+                </div>
                 <div class="cards">
                   <article class="card">
                     <div class="card-media">
                       <img
                         alt="Bosque encantado"
-                        data-img="assets/img/PerfumesEnNaturaleza.jpeg"
+                        data-img="assets/img/perfumeIlustrado2.png"
                       />
                     </div>
                     <div class="card-body">
@@ -235,7 +289,7 @@
                     <div class="card-media">
                       <img
                         alt="Corazón de bosque"
-                        data-img="assets/img/Flores2.jpeg"
+                        data-img="assets/img/perfumeIlustrado1.png"
                       />
                     </div>
                     <div class="card-body">
@@ -251,7 +305,7 @@
                     <div class="card-media">
                       <img
                         alt="Mágico encanto"
-                        data-img="assets/img/PerfumesEnNaturaleza2.jpeg"
+                        data-img="assets/img/perfumeIlustrado3.png"
                       />
                     </div>
                     <div class="card-body">
@@ -264,7 +318,7 @@
                     <div class="card-media">
                       <img
                         alt="Soleado Amanecer"
-                        data-img="assets/img/Perfume.jpeg"
+                        data-img="assets/img/perfumeIlustrado2.png"
                       />
                     </div>
                     <div class="card-body">
@@ -275,7 +329,10 @@
 
                   <article class="card">
                     <div class="card-media">
-                      <img alt="La Vid" data-img="assets/img/Perfumes2.jpeg" />
+                      <img
+                        alt="La Vid"
+                        data-img="assets/img/perfumeIlustrado3.png"
+                      />
                     </div>
                     <div class="card-body">
                       <h4>La Vid</h4>
@@ -298,10 +355,17 @@
                     Escuchar canción ▶</a
                   >
                 </h4>
+                <div class="subgroup-header">
+                  <img
+                    src="assets/img/MacrocosmosMicrocosmos.jpeg"
+                    alt="Macrocosmos / Microcosmos"
+                    class="subgroup-image"
+                  />
+                </div>
                 <div class="cards">
                   <article class="card">
                     <div class="card-media">
-                      <img alt="Cristal" data-img="assets/img/Flore.jpeg" />
+                      <img alt="Cristal" data-img="assets/img/Cristal.png" />
                     </div>
                     <div class="card-body">
                       <h4>Cristal</h4>
@@ -317,7 +381,7 @@
                     <div class="card-media">
                       <img
                         alt="Ruá"
-                        data-img="assets/img/PerfumesEnNaturalezaPanoramica.jpeg"
+                        data-img="assets/img/perfumeIlustrado1.png"
                       />
                     </div>
                     <div class="card-body">
@@ -331,7 +395,10 @@
 
                   <article class="card">
                     <div class="card-media">
-                      <img alt="Alba Azul" data-img="assets/img/Perfume.jpeg" />
+                      <img
+                        alt="Alba Azul"
+                        data-img="assets/img/perfumeIlustrado2.png"
+                      />
                     </div>
                     <div class="card-body">
                       <h4>Alba Azul</h4>
@@ -347,7 +414,7 @@
                     <div class="card-media">
                       <img
                         alt="Suspiro Terrenal"
-                        data-img="assets/img/Flores2.jpeg"
+                        data-img="assets/img/perfumeIlustrado4.png"
                       />
                     </div>
                     <div class="card-body">
@@ -364,11 +431,13 @@
             </div>
           </section>
 
-          <section id="collection-2" class="collection-section">
+          <section
+            id="collection-2"
+            class="collection-section collection-tab"
+            role="tabpanel"
+            aria-labelledby="tab-collection-2"
+          >
             <div class="collection-header">
-              <div class="collection-media">
-                <img src="assets/img/Naturaleza.jpg" alt="Jardín Sagrado" />
-              </div>
               <div class="collection-header-body">
                 <h3>Jardín Sagrado</h3>
                 <p class="collection-desc">
@@ -385,10 +454,17 @@
             <div class="collection-subgroups">
               <div class="subgroup">
                 <h4>Diosas</h4>
+                <div class="subgroup-header">
+                  <img
+                    src="assets/img/Flores.jpeg"
+                    alt="Diosas"
+                    class="subgroup-image"
+                  />
+                </div>
                 <div class="cards">
                   <article class="card">
                     <div class="card-media">
-                      <img alt="Jaizlan" data-img="assets/img/Flores.jpeg" />
+                      <img alt="Jaizlan" data-img="assets/img/p1.png" />
                     </div>
                     <div class="card-body">
                       <h4>Jaizlan</h4>
@@ -402,10 +478,7 @@
 
                   <article class="card">
                     <div class="card-media">
-                      <img
-                        alt="Merlina"
-                        data-img="assets/img/PerfumeArtesanal.jpeg"
-                      />
+                      <img alt="Merlina" data-img="assets/img/p2.png" />
                     </div>
                     <div class="card-body">
                       <h4>Merlina</h4>
@@ -419,7 +492,7 @@
 
                   <article class="card">
                     <div class="card-media">
-                      <img alt="Ninué" data-img="assets/img/Perfume.jpeg" />
+                      <img alt="Ninué" data-img="assets/img/p3.png" />
                     </div>
                     <div class="card-body">
                       <h4>Ninué</h4>
@@ -432,7 +505,7 @@
 
                   <article class="card">
                     <div class="card-media">
-                      <img alt="Dulciné" data-img="assets/img/Perfumes2.jpeg" />
+                      <img alt="Dulciné" data-img="assets/img/p1.png" />
                     </div>
                     <div class="card-body">
                       <h4>Dulciné</h4>
@@ -447,13 +520,17 @@
 
               <div class="subgroup">
                 <h4>Dioses</h4>
+                <div class="subgroup-header">
+                  <img
+                    src="assets/img/Flores2.jpeg"
+                    alt="Dioses"
+                    class="subgroup-image"
+                  />
+                </div>
                 <div class="cards">
                   <article class="card">
                     <div class="card-media">
-                      <img
-                        alt="Liró"
-                        data-img="assets/img/PerfumeArtesanal.jpeg"
-                      />
+                      <img alt="Liró" data-img="assets/img/p2.png" />
                     </div>
                     <div class="card-body">
                       <h4>Liró</h4>
@@ -463,7 +540,7 @@
 
                   <article class="card">
                     <div class="card-media">
-                      <img alt="Aón" data-img="assets/img/Perfumes3.jpeg" />
+                      <img alt="Aón" data-img="assets/img/p1.png" />
                     </div>
                     <div class="card-body">
                       <h4>Aón</h4>
@@ -473,7 +550,7 @@
 
                   <article class="card">
                     <div class="card-media">
-                      <img alt="Ovix" data-img="assets/img/Perfumes.jpeg" />
+                      <img alt="Ovix" data-img="assets/img/p2.png" />
                     </div>
                     <div class="card-body">
                       <h4>Ovix</h4>
@@ -485,14 +562,13 @@
             </div>
           </section>
 
-          <section id="collection-3" class="collection-section">
+          <section
+            id="collection-3"
+            class="collection-section collection-tab"
+            role="tabpanel"
+            aria-labelledby="tab-collection-3"
+          >
             <div class="collection-header">
-              <div class="collection-media">
-                <img
-                  src="assets/img/MacrocosmosMicrocosmos.jpg"
-                  alt="Armonización Vibracional"
-                />
-              </div>
               <div class="collection-header-body">
                 <h3>Armonización Vibracional</h3>
                 <p class="collection-desc">
@@ -509,7 +585,7 @@
             <div class="cards">
               <article class="card">
                 <div class="card-media">
-                  <img alt="Alegría" data-img="assets/img/Perfumes3.jpeg" />
+                  <img alt="Alegría" data-img="assets/img/p1.png" />
                 </div>
                 <div class="card-body">
                   <h4>Alegría</h4>
@@ -521,7 +597,7 @@
 
               <article class="card">
                 <div class="card-media">
-                  <img alt="Plenitud" data-img="assets/img/Perfumes2.jpeg" />
+                  <img alt="Plenitud" data-img="assets/img/p2.png" />
                 </div>
                 <div class="card-body">
                   <h4>Plenitud</h4>
@@ -534,7 +610,7 @@
 
               <article class="card">
                 <div class="card-media">
-                  <img alt="Serenidad" data-img="assets/img/Flores2.jpeg" />
+                  <img alt="Serenidad" data-img="assets/img/p3.png" />
                 </div>
                 <div class="card-body">
                   <h4>Serenidad</h4>
@@ -547,10 +623,7 @@
 
               <article class="card">
                 <div class="card-media">
-                  <img
-                    alt="Control estrés"
-                    data-img="assets/img/PerfumeArtesanal.jpeg"
-                  />
+                  <img alt="Control estrés" data-img="assets/img/p1.png" />
                 </div>
                 <div class="card-body">
                   <h4>Control estrés</h4>
@@ -565,7 +638,7 @@
                 <div class="card-media">
                   <img
                     alt="Equilibrio psicoemocional"
-                    data-img="assets/img/Perfume.jpeg"
+                    data-img="assets/img/p2.png"
                   />
                 </div>
                 <div class="card-body">
@@ -581,7 +654,7 @@
                 <div class="card-media">
                   <img
                     alt="Equilibrio mente-corazón"
-                    data-img="assets/img/PerfumesEnNaturaleza.jpeg"
+                    data-img="assets/img/p3.png"
                   />
                 </div>
                 <div class="card-body">
@@ -595,10 +668,7 @@
 
               <article class="card">
                 <div class="card-media">
-                  <img
-                    alt="Niño interior"
-                    data-img="assets/img/PerfumesEnNaturaleza2.jpeg"
-                  />
+                  <img alt="Niño interior" data-img="assets/img/p1.png" />
                 </div>
                 <div class="card-body">
                   <h4>Niño interior</h4>
@@ -608,7 +678,7 @@
 
               <article class="card">
                 <div class="card-media">
-                  <img alt="Pasioné" data-img="assets/img/Perfumes3.jpeg" />
+                  <img alt="Pasioné" data-img="assets/img/p2.png" />
                 </div>
                 <div class="card-body">
                   <h4>Pasioné</h4>
@@ -621,14 +691,13 @@
             </div>
           </section>
 
-          <section id="collection-4" class="collection-section">
+          <section
+            id="collection-4"
+            class="collection-section collection-tab"
+            role="tabpanel"
+            aria-labelledby="tab-collection-4"
+          >
             <div class="collection-header">
-              <div class="collection-media">
-                <img
-                  src="assets/img/FlaviaMeditando.jpeg"
-                  alt="Intención y Resonancia"
-                />
-              </div>
               <div class="collection-header-body">
                 <h3>Intención y Resonancia</h3>
                 <p class="collection-desc">
@@ -643,26 +712,32 @@
             <div class="collection-subgroups">
               <div class="subgroup">
                 <h4>Génesis</h4>
+                <div class="subgroup-header">
+                  <img
+                    src="assets/img/PerfumeArtesanal.jpeg"
+                    alt="Génesis"
+                    class="subgroup-image"
+                  />
+                </div>
                 <div class="cards">
                   <article class="card featured">
                     <div class="card-media">
-                      <img
-                        alt="Corazón Exótico"
-                        data-img="assets/img/PerfumeArtesanal.jpeg"
-                      />
+                      <img alt="Corazón Exótico" data-img="assets/img/p2.png" />
                     </div>
                     <div class="card-body">
                       <h4>Corazón Exótico</h4>
-                      <p>Mi perfume personal. El más vendido. Sexy, dulce, pícaro, con brillo propio. Es una fórmula íntima. Contiene elixir de gemas, flores de Bach, con resonancia en mi signo zodiacal, acuario.</p>
+                      <p>
+                        Mi perfume personal. El más vendido. Sexy, dulce,
+                        pícaro, con brillo propio. Es una fórmula íntima.
+                        Contiene elixir de gemas, flores de Bach, con resonancia
+                        en mi signo zodiacal, acuario.
+                      </p>
                     </div>
                   </article>
 
                   <article class="card">
                     <div class="card-media">
-                      <img
-                        alt="Sisué"
-                        data-img="assets/img/Perfume.jpeg"
-                      />
+                      <img alt="Sisué" data-img="assets/img/p3.png" />
                     </div>
                     <div class="card-body">
                       <h4>Sisué</h4>
@@ -672,10 +747,7 @@
 
                   <article class="card">
                     <div class="card-media">
-                      <img
-                        alt="Suave Pasión"
-                        data-img="assets/img/Perfumes2.jpeg"
-                      />
+                      <img alt="Suave Pasión" data-img="assets/img/p1.png" />
                     </div>
                     <div class="card-body">
                       <h4>Suave Pasión</h4>
@@ -685,10 +757,7 @@
 
                   <article class="card">
                     <div class="card-media">
-                      <img
-                        alt="12 Rosas"
-                        data-img="assets/img/Flores.jpeg"
-                      />
+                      <img alt="12 Rosas" data-img="assets/img/p2.png" />
                     </div>
                     <div class="card-body">
                       <h4>12 Rosas</h4>
@@ -698,10 +767,7 @@
 
                   <article class="card">
                     <div class="card-media">
-                      <img
-                        alt="Reina Luna"
-                        data-img="assets/img/Flores2.jpeg"
-                      />
+                      <img alt="Reina Luna" data-img="assets/img/p3.png" />
                     </div>
                     <div class="card-body">
                       <h4>Reina Luna</h4>
@@ -713,17 +779,29 @@
 
               <div class="subgroup">
                 <h4>El legado del Alma</h4>
+                <div class="subgroup-header">
+                  <img
+                    src="assets/img/Flore.jpeg"
+                    alt="El legado del Alma"
+                    class="subgroup-image"
+                  />
+                </div>
                 <div class="cards">
                   <article class="card featured">
                     <div class="card-media">
-                      <img
-                        alt="Etherea"
-                        data-img="assets/img/Flore.jpeg"
-                      />
+                      <img alt="Etherea" data-img="assets/img/p1.png" />
                     </div>
                     <div class="card-body">
                       <h4>Etherea</h4>
-                      <p>Fórmula íntima en conexión profunda con la memoria y ancestros. Portal olfativo que ancla la sanación del duelo y mantiene viva la memoria de luz. Nació como encanto mágico, pero su maceración reveló una vibración única, el recuerdo puro de mi madre, Esther, la fuente de la vida. Representa el amor que trasciende el plano físico, ayuda a establecer conexión con seres queridos.</p>
+                      <p>
+                        Fórmula íntima en conexión profunda con la memoria y
+                        ancestros. Portal olfativo que ancla la sanación del
+                        duelo y mantiene viva la memoria de luz. Nació como
+                        encanto mágico, pero su maceración reveló una vibración
+                        única, el recuerdo puro de mi madre, Esther, la fuente
+                        de la vida. Representa el amor que trasciende el plano
+                        físico, ayuda a establecer conexión con seres queridos.
+                      </p>
                     </div>
                   </article>
                 </div>
