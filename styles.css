@@ -1024,17 +1024,102 @@ section.collection-section .cards .card .card-media img {
   transform: translate(-50%, -50%) scale(1.05);
 }
 
-/* Alquimia grid */
-.alquimia-grid {
+/* Alquimia - Gallery */
+.alquimia-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.alquimia-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Alquimia Products Grid */
+.alquimia-products-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 20px;
+  margin-top: 32px;
 }
-.alquimia-card {
-  background: var(--card);
-  padding: 12px;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
+
+/* Alquimia Product Card */
+.alquimia-product-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(250, 248, 255, 0.95)
+  );
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(111, 75, 216, 0.12);
+  box-shadow: 0 8px 24px rgba(17, 17, 17, 0.06);
+  transition: all 0.3s ease;
+}
+
+.alquimia-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(17, 17, 17, 0.1);
+  border-color: rgba(111, 75, 216, 0.25);
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #111;
+  background: linear-gradient(135deg, #6f4bd8, #6741d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.product-subtitle {
+  font-size: 13px;
+  color: #8f6bf0;
+  margin: 0 0 14px 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.product-description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #5a5a5a;
+}
+
+.product-description p {
+  margin: 0 0 12px 0;
+}
+
+.product-description p:last-child {
+  margin-bottom: 0;
+}
+
+.product-use {
+  margin-bottom: 14px;
+}
+
+.product-use h5 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #6f4bd8;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.product-use p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #5a5a5a;
 }
 /* Footer */
 .site-footer {
@@ -1241,18 +1326,35 @@ section.collection-section .cards .card .card-media img {
       background: var(--glass);
     }
 
-    /* Alquimia grid improvements */
-    .alquimia-grid {
-      display: grid;
-      gap: 12px;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    /* Alquimia gallery and products improvements */
+    .alquimia-gallery {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
     }
-    .alquimia-card {
-      background: var(--card);
-      padding: 12px;
+    .alquimia-gallery img {
+      height: 240px;
       border-radius: 12px;
-      box-shadow: var(--shadow);
-      text-align: center;
+    }
+
+    .alquimia-products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .alquimia-product-card {
+      padding: 28px;
+    }
+
+    .product-title {
+      font-size: 16px;
+    }
+
+    .product-description {
+      font-size: 13px;
+      line-height: 1.7;
     }
 
     /* Footer */
@@ -1336,19 +1438,13 @@ section.collection-section .cards .card .card-media img {
       font-weight: 600;
     }
 
-    /* Alquimia intro card */
-    .alquimia-intro {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      padding: 12px;
-      margin-bottom: 12px;
+    /* Alquimia section (new layout) */
+    .alquimia-gallery {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
     }
-    .alquimia-photo img {
-      width: 140px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 10px;
+    .alquimia-gallery img {
+      height: 260px;
     }
     .alquimia-intro-text p {
       margin: 0;
@@ -1422,8 +1518,7 @@ section.collection-section .cards .card .card-media img {
     }
 
     @media (min-width: 900px) {
-      .consultoria-card,
-      .alquimia-intro {
+      .consultoria-card {
         max-width: 920px;
         margin-left: auto;
         margin-right: auto;
@@ -1452,7 +1547,7 @@ section.collection-section .cards .card .card-media img {
       }
     }
   }
-  .alquimia-grid {
+  .alquimia-products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .product-grid {
@@ -1475,7 +1570,7 @@ section.collection-section .cards .card .card-media img {
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
-  .alquimia-grid {
+  .alquimia-products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
   .product-grid {
@@ -1724,5 +1819,54 @@ section.collection-section .cards .card .card-media img {
   .tab-btn {
     padding: 12px 22px;
     font-size: 15px;
+  }
+}
+/* Enhancements for Perfumería: larger product images and better mobile layout */
+#perfumeria .collection-section .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+#perfumeria .collection-section .cards .card .card-media {
+  width: 100%;
+  height: 260px;
+  flex: none;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 46px rgba(17, 17, 17, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+#perfumeria .collection-section .cards .card .card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 300ms ease;
+}
+#perfumeria .collection-section .cards .card:hover .card-media img {
+  transform: scale(1.04);
+}
+#perfumeria .collection-section .cards .card .card-body {
+  padding: 16px;
+  text-align: left;
+}
+@media (max-width: 899px) {
+  #perfumeria .collection-section .cards .card .card-media {
+    height: 200px;
+  }
+  #perfumeria .collection-section .cards .card .card-body {
+    text-align: center;
+  }
+  #perfumeria .collection-section .cards .card .card-body h4 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 520px) {
+  #perfumeria .collection-section .cards .card .card-media {
+    height: 180px;
+  }
+  #perfumeria .collection-section .cards .card .card-body {
+    padding: 12px;
   }
 }
