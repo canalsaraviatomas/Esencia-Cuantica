@@ -848,10 +848,16 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
   gap: 20px;
   padding: 0;
   margin-top: 18px;
+}
+
+@media (min-width: 480px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 
 .card {
@@ -2017,15 +2023,17 @@ section.collection-section .cards .card .card-media img {
 }
 @media (max-width: 520px) {
   #perfumeria .collection-section .cards .card .card-media {
-    height: 180px;
+    height: 200px;
+    min-height: 200px;
   }
   #perfumeria .collection-section .cards .card .card-body {
     padding: 12px;
   }
+  #perfumeria .collection-section .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
-/* ===============================
-   BOTONES DE CONTACTO – MOBILE FIRST
-   =============================== */
 
 .consultoria-contacts {
   display: flex;
