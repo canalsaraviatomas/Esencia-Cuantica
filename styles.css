@@ -1958,7 +1958,8 @@ section.collection-section .cards .card .card-media img {
 
 /* Mobile safety: avoid horizontal scroll and ensure nav / footer stay inside viewport */
 @media (max-width: 720px) {
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
   }
 
@@ -1992,8 +1993,12 @@ section.collection-section .cards .card .card-media img {
   .musica-card {
     padding: 14px;
     border-radius: 12px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,248,255,0.98));
-    box-shadow: 0 8px 20px rgba(17,17,17,0.04);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(250, 248, 255, 0.98)
+    );
+    box-shadow: 0 8px 20px rgba(17, 17, 17, 0.04);
     text-align: center;
   }
 
