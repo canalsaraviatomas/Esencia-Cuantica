@@ -130,9 +130,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 0.08 }
+    { threshold: 0, rootMargin: "50px" }
   );
-  faders.forEach((f) => io.observe(f));
+  faders.forEach((f) => {
+    // Ensure visibility immediately as fallback
+    f.classList.add("visible");
+    io.observe(f);
+  });
 
   // Parallax subtle effect on hero
   const heroBg = document.querySelector(".hero-bg");

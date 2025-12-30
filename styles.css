@@ -1238,13 +1238,21 @@ section.collection-section .cards .card .card-media img {
 }
 /* Fade-in */
 .fade-in {
-  opacity: 0;
-  transform: translateY(10px);
+  opacity: 1;
+  transform: none;
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .fade-in.visible {
   opacity: 1;
   transform: none;
+}
+
+/* Para navegadores que soportan JavaScript, usar animación */
+@supports (--webkit: 0) {
+  .fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 }
 
 /* Responsive - larger screens */
