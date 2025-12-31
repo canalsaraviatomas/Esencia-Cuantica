@@ -1539,6 +1539,12 @@ section.collection-section .cards .card .card-media img {
   }
 
   /* Consultoría card - harmonized with site */
+  .consultoria-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    align-items: start;
+  }
   .consultoria-card {
     display: flex;
     flex-direction: column;
@@ -1633,15 +1639,30 @@ section.collection-section .cards .card .card-media img {
   }
 
   @media (min-width: 900px) {
+    .consultoria-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
     .consultoria-card {
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 32px;
+      max-width: none;
+      padding: 28px;
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
     }
     .consultoria-photo img {
       width: 160px;
       height: 160px;
+      margin-right: 18px;
+      flex-shrink: 0;
+    }
+    .consultoria-body {
+      text-align: left;
+    }
+    .consultoria-contacts {
+      flex-direction: row;
+      gap: 12px;
+      margin-top: 12px;
     }
   }
 
