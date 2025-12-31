@@ -211,7 +211,7 @@ body {
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(103, 65, 217, 0.08);
+  box-shadow: 0 12px 30px rgba(111, 75, 216, 0.08);
 }
 
 .hero-inner {
@@ -626,18 +626,6 @@ body {
   display: grid;
   gap: 48px;
   margin-bottom: 32px;
-}
-
-.collection-subgroups .subgroup {
-  display: block;
-}
-
-.collection-subgroups .subgroup h5 {
-  margin: 12px 0 0;
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
 }
 
 /* Nuevos estilos para las imágenes de subgrupos */
@@ -1167,7 +1155,7 @@ section.collection-section .cards .card .card-media img {
   font-weight: 700;
   margin: 0 0 6px 0;
   color: #111;
-  background: linear-gradient(135deg, #6f4bd8, #6741d9);
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1175,7 +1163,7 @@ section.collection-section .cards .card .card-media img {
 
 .product-subtitle {
   font-size: 13px;
-  color: #8f6bf0;
+  color: var(--accent);
   margin: 0 0 14px 0;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -1269,8 +1257,8 @@ section.collection-section .cards .card .card-media img {
     --bg: #fbfaf7;
     --card: #ffffff;
     --muted: #6b6b6b;
-    --accent: #8f6bf0;
-    --accent-2: #6741d9;
+    --accent: #9b8cf6; /* soft lilac */
+    --accent-2: #6f4bd8; /* deep lilac */
     --glass: rgba(255, 255, 255, 0.6);
     --shadow: 0 10px 30px rgba(17, 17, 17, 0.06);
     --radius: 14px;
@@ -1486,7 +1474,7 @@ section.collection-section .cards .card .card-media img {
   .hero-cta:hover,
   .cta:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(103, 65, 217, 0.12);
+    box-shadow: 0 12px 30px rgba(111, 75, 216, 0.12);
   }
 
   @media (max-width: 639px) {
@@ -2108,4 +2096,271 @@ section.collection-section .cards .card .card-media img {
 
 .site-footer .footer-nav {
   margin-left: auto;
+}
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hero-brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.hero-tagline {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  color: rgba(255, 255, 255, 0.85);
+  opacity: 0.9;
+}
+/* ===============================
+   SISTEMA TIPOGRÁFICO CORREGIDO
+   Esencia Cuántica
+   =============================== */
+
+/* Variables suaves */
+:root {
+  --text-dark: #2e2a33;
+  --text-soft: #4a4455;
+  --text-light: rgba(255, 255, 255, 0.9);
+  --text-muted: rgba(255, 255, 255, 0.75);
+  --lila-main: #b8a6d9;
+  --lila-soft: #d8cdef;
+}
+
+/* -------------------------------
+   TEXTO GLOBAL
+-------------------------------- */
+
+body {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: var(--text-soft);
+}
+
+/* -------------------------------
+   ENCABEZADOS
+-------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--text-dark);
+}
+
+/* Títulos principales */
+.section-title {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+  text-align: center;
+  color: var(--lila-main);
+}
+
+/* Subtítulos */
+.section-subtitle,
+.section-sub {
+  font-size: 17px;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 32px;
+  color: var(--text-soft);
+}
+
+/* -------------------------------
+   TEXTO CORRIDO
+-------------------------------- */
+
+p {
+  font-size: 15.5px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  margin-bottom: 14px;
+  color: var(--text-soft);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+em {
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* -------------------------------
+   HERO (fondos oscuros)
+-------------------------------- */
+
+.hero {
+  color: var(--text-light);
+}
+
+.hero-brand {
+  font-size: 30px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.hero-tagline {
+  font-size: 16px;
+  font-style: italic;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+}
+
+/* -------------------------------
+   CARDS CLARAS
+-------------------------------- */
+
+.card,
+.alquimia-product-card,
+.musica-card,
+.consultoria-card {
+  color: var(--text-soft);
+}
+
+.card h4,
+.musica-card h4,
+.product-title {
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+
+.card p,
+.musica-card p,
+.product-description p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--text-soft);
+}
+
+/* Subtítulos de producto */
+.product-subtitle {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--lila-main);
+  margin-bottom: 10px;
+}
+
+/* -------------------------------
+   COLECCIONES
+-------------------------------- */
+
+.collection-header h3 {
+  font-size: 22px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lila-main);
+}
+
+.collection-desc {
+  font-size: 15px;
+  font-style: italic;
+  letter-spacing: 0.06em;
+  color: var(--text-soft);
+}
+
+/* Subgrupos */
+.subgroup > h4 {
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+/* Spotify links */
+.subtitle-spotify {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lila-main);
+}
+
+.subtitle-spotify:hover {
+  color: var(--text-dark);
+}
+
+/* -------------------------------
+   NAVEGACIÓN
+-------------------------------- */
+
+.main-nav a,
+.footer-nav a {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.main-nav a:hover,
+.footer-nav a:hover {
+  color: var(--lila-main);
+}
+
+/* -------------------------------
+   CONSULTORÍA
+-------------------------------- */
+
+.consultoria-body h4 {
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  color: var(--lila-main);
+}
+
+.contact-btn {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+/* -------------------------------
+   FOOTER
+-------------------------------- */
+
+.site-footer {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--text-soft);
+}
+
+.site-footer strong {
+  letter-spacing: 0.14em;
+  color: var(--lila-main);
+}
+
+.collection-subgroups .subgroup > p {
+  margin: 0 0 18px 0;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 600px;
 }
