@@ -274,12 +274,6 @@ a {
   outline: none;
 }
 
-.nav-list a.active,
-.nav-list a[aria-current="page"] {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  color: #fff;
-}
-
 /* Desktop Navigation */
 @media (min-width: 900px) {
   .nav-toggle {
@@ -609,9 +603,11 @@ a {
 .subgroup > p {
   margin: 0 0 var(--space-lg);
   color: #4a4455;
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.8;
   max-width: 700px;
+  font-style: italic;
+  letter-spacing: 0.02em;
 }
 
 /* ============================================
@@ -1014,6 +1010,12 @@ a {
   box-shadow: var(--shadow-hover);
 }
 
+.consultoria-photo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .consultoria-photo img {
   width: 140px;
   height: 140px;
@@ -1021,6 +1023,12 @@ a {
   border-radius: var(--radius);
   border: 2px solid rgba(111, 75, 216, 0.08);
   box-shadow: 0 12px 32px rgba(17, 17, 17, 0.08);
+}
+
+.consultoria-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .consultoria-body h4 {
@@ -1036,6 +1044,41 @@ a {
   color: var(--muted);
   line-height: 1.7;
   font-size: 15px;
+}
+
+/* En móvil: título → imagen → párrafo */
+@media (max-width: 899px) {
+  .consultoria-card {
+    flex-direction: column;
+  }
+  
+  .consultoria-body {
+    display: contents;
+  }
+  
+  .consultoria-body h4 {
+    order: 1;
+    margin-bottom: var(--space-md);
+    width: 100%;
+  }
+  
+  .consultoria-body p {
+    order: 3;
+    margin-top: var(--space-md);
+    width: 100%;
+  }
+  
+  .consultoria-photo {
+    order: 2;
+    width: 100%;
+    margin: 0 0 var(--space-md) 0;
+  }
+  
+  .consultoria-photo img {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+  }
 }
 
 .consultoria-contacts {
@@ -1105,15 +1148,33 @@ a {
     text-align: left;
   }
   
+  .consultoria-body {
+    display: flex;
+    flex-direction: column;
+    order: 0;
+    text-align: left;
+  }
+  
+  .consultoria-body h4 {
+    order: 0;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .consultoria-body p {
+    order: 0;
+    margin-top: 0;
+  }
+  
+  .consultoria-photo {
+    order: 0;
+    width: auto;
+    margin: 0 var(--space-md) 0 0;
+  }
+  
   .consultoria-photo img {
     width: 160px;
     height: 160px;
-    margin-right: var(--space-md);
-    flex-shrink: 0;
-  }
-  
-  .consultoria-body {
-    text-align: left;
+    max-width: none;
   }
   
   .consultoria-contacts {
@@ -1126,11 +1187,6 @@ a {
 @media (max-width: 720px) {
   .consultoria-card {
     padding: var(--space-md);
-  }
-  
-  .consultoria-photo img {
-    width: 120px;
-    height: 120px;
   }
   
   .consultoria-body p {

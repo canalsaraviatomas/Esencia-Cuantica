@@ -217,47 +217,8 @@ document.addEventListener("DOMContentLoaded", function () {
     yearElement.textContent = new Date().getFullYear();
   }
 
-  // ============================================
-  // Active Navigation Link Highlighting
-  // ============================================
-  const updateActiveNav = () => {
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll(".nav-list a[href^='#']");
-    
-    if (sections.length === 0 || navLinks.length === 0) return;
-    
-    const scrollPosition = window.pageYOffset + 150;
-    
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      const sectionId = section.getAttribute("id");
-      
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${sectionId}`) {
-            link.classList.add("active");
-            link.setAttribute("aria-current", "page");
-          } else {
-            link.removeAttribute("aria-current");
-          }
-        });
-      }
-    });
-  };
-  
-  // Update on scroll (throttled)
-  let scrollTimeout;
-  window.addEventListener("scroll", () => {
-    if (scrollTimeout) {
-      window.cancelAnimationFrame(scrollTimeout);
-    }
-    scrollTimeout = window.requestAnimationFrame(updateActiveNav);
-  }, { passive: true });
-  
-  // Initial update
-  updateActiveNav();
+  // Active navigation link highlighting removed per user request
+  // Only hover effects remain
 
   // ============================================
   // Improve Touch Target Sizes on Mobile
