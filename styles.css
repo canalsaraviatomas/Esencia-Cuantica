@@ -483,7 +483,7 @@ a {
 }
 
 .collection-tab {
-  display: none;
+  display: block;
   animation: fadeIn 300ms ease-in-out;
 }
 
