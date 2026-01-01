@@ -610,6 +610,42 @@ a {
   letter-spacing: 0.02em;
 }
 
+/* En desktop: foto a la izquierda, párrafo a la derecha, centrados verticalmente */
+@media (min-width: 900px) {
+  .subgroup {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .subgroup > h4 {
+    width: 100%;
+    flex-basis: 100%;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .subgroup-header {
+    flex-shrink: 0;
+    margin: var(--space-md) var(--space-lg) var(--space-lg) 0;
+    max-width: 400px;
+    height: 240px;
+    align-self: center;
+  }
+  
+  .subgroup > p {
+    flex: 1;
+    min-width: 300px;
+    margin: var(--space-md) 0 var(--space-lg) 0;
+    max-width: none;
+    align-self: center;
+  }
+  
+  .subgroup > .cards {
+    width: 100%;
+    flex-basis: 100%;
+    margin-top: var(--space-lg);
+  }
+}
+
 /* ============================================
    CARDS
    ============================================ */
@@ -1064,7 +1100,7 @@ a {
   
   .consultoria-body p {
     order: 3;
-    margin-top: var(--space-md);
+    margin-top: var(--space-sm);
     width: 100%;
   }
   
