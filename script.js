@@ -39,86 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Accordion behavior (main and sub)
-  function setupAccordion(containerSelector, toggleSelector, panelSelector) {
-    const toggles = document.querySelectorAll(toggleSelector);
-    toggles.forEach((btn) => {
-      // set initial aria state
-      btn.setAttribute("aria-expanded", "false");
-      btn.addEventListener("click", () => {
-        const panel = btn.nextElementSibling;
-        if (!panel) return;
-        const isOpen = panel.style.maxHeight && panel.style.maxHeight !== "0px";
-        // close other panels at same level
-        const siblings = Array.from(document.querySelectorAll(toggleSelector))
-          .map((t) => t.nextElementSibling)
-          .filter((p) => p !== panel);
-        siblings.forEach((s) => {
-          if (!s) return;
-          s.style.maxHeight = null;
-          const tb = s.previousElementSibling;
-          if (tb) {
-            tb.classList.remove("is-open");
-            tb.setAttribute("aria-expanded", "false");
-          }
-        });
-        if (isOpen) {
-          panel.style.maxHeight = null;
-          btn.classList.remove("is-open");
-          btn.setAttribute("aria-expanded", "false");
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-          btn.classList.add("is-open");
-          btn.setAttribute("aria-expanded", "true");
-        }
-      });
-    });
-  }
-  setupAccordion("#collections-acc", ".accordion-toggle", ".accordion-panel");
-  setupAccordion("#collections-acc", ".sub-toggle", ".sub-panel");
-
-  // make sure initially no panels open, but allow first-level closed
-  document
-    .querySelectorAll(".accordion-panel, .sub-panel")
-    .forEach((p) => (p.style.maxHeight = null));
-
-  // Sistema de tabs para colecciones de perfumes
-  const tabBtns = document.querySelectorAll(".tab-btn");
-  const collectionTabs = document.querySelectorAll(".collection-tab");
-
-  if (tabBtns.length > 0) {
-    tabBtns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const tabId = btn.getAttribute("data-tab");
-
-        // Remover clase active de todos los botones y tabs
-        tabBtns.forEach((b) => {
-          b.classList.remove("active");
-          b.setAttribute("aria-selected", "false");
-        });
-        collectionTabs.forEach((tab) => {
-          tab.classList.remove("active");
-        });
-
-        // Añadir clase active al botón y tab seleccionado
-        btn.classList.add("active");
-        btn.setAttribute("aria-selected", "true");
-        const selectedTab = document.getElementById(tabId);
-        if (selectedTab) {
-          selectedTab.classList.add("active");
-        }
-      });
-
-      // Permitir navegación con teclado (Enter/Space)
-      btn.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          btn.click();
-        }
-      });
-    });
-  }
-
   // Fade-in on scroll
   const faders = document.querySelectorAll(".fade-in");
   const io = new IntersectionObserver(
@@ -169,48 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
       q.addEventListener("click", () => window.open(link, "_blank"));
     }
   });
-
-  // Accessibility: allow Enter/Space to toggle accordions
-  document.querySelectorAll(".accordion-toggle, .sub-toggle").forEach((btn) => {
-    btn.setAttribute("tabindex", "0");
-    btn.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        btn.click();
-      }
-    });
-  });
-
-  // Filtrado de productos por categoría (sección Perfumes)
-  const filterBtns = document.querySelectorAll(".filter-btn");
-  const productCards = document.querySelectorAll(".product-card");
-  if (filterBtns.length && productCards.length) {
-    filterBtns.forEach((btn) => {
-      // keyboard accessibility
-      btn.setAttribute("tabindex", "0");
-      btn.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          btn.click();
-        }
-      });
-
-      btn.addEventListener("click", () => {
-        const filter = btn.dataset.filter;
-        filterBtns.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        productCards.forEach((card) => {
-          const cat = card.dataset.category || "";
-          if (filter === "all" || cat === filter) {
-            card.style.display = "";
-          } else {
-            card.style.display = "none";
-          }
-        });
-      });
-    });
-  }
 
   // Footer year dynamic
   const yEl = document.getElementById("year");

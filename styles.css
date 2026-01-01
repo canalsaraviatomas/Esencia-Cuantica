@@ -9,9 +9,6 @@
   --shadow: 0 6px 18px rgba(17, 17, 17, 0.06);
   --radius: 14px;
   --max-width: 1100px;
-}
-/* Typography scale */
-:root {
   --type-base: 16px;
   --type-scale: 1.125; /* modular scale */
 }
@@ -158,17 +155,13 @@ body {
     display: none !important;
   }
 }
-.nav-list a:focus {
-  outline: 3px solid rgba(111, 75, 216, 0.12);
-  outline-offset: 3px;
-}
 .site-header.scrolled {
   box-shadow: 0 6px 22px rgba(17, 17, 17, 0.08);
 }
 /* Hero: softer, more delicate presentation */
 .hero {
   position: relative;
-  padding: 64px 0 48px;
+  padding: 56px 0 56px;
   display: flex;
   align-items: center;
 }
@@ -217,13 +210,6 @@ body {
 .hero-inner {
   text-align: left;
 }
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-}
-
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -303,146 +289,6 @@ body {
   }
 }
 
-/* Manifiesto grid: imagen + texto */
-.manifiesto-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  align-items: start;
-}
-.manifiesto-photo img {
-  width: 100%;
-  max-width: 340px;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: var(--shadow);
-}
-.manifiesto-text p {
-  margin: 0;
-  white-space: pre-wrap;
-  line-height: 1.6;
-}
-
-/* Mejora estética del Manifiesto */
-.manifiesto {
-  --manifiesto-accent: rgba(111, 75, 216, 0.06);
-}
-.manifiesto .section-subtitle {
-  font-size: 16px;
-  color: var(--muted);
-  margin-top: 6px;
-  margin-bottom: 14px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
-/* Refined manifesto: unified block with soft accent overlay and tighter composition */
-.manifiesto {
-  position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.995),
-    rgba(250, 248, 255, 0.995)
-  );
-  border-radius: 16px;
-  padding: 18px 18px 20px;
-  overflow: hidden;
-  border: 1px solid rgba(111, 75, 216, 0.06);
-}
-.manifiesto::before {
-  content: "";
-  position: absolute;
-  left: -10%;
-  top: -18%;
-  width: 64%;
-  height: 160%;
-  background: radial-gradient(
-    circle at 30% 30%,
-    rgba(111, 75, 216, 0.08),
-    transparent 36%
-  );
-  transform: rotate(-12deg);
-  pointer-events: none;
-}
-.manifiesto .section-subtitle {
-  display: block;
-  margin: 6px 0 12px;
-  color: var(--muted);
-  font-weight: 600;
-}
-.manifiesto-grid {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 20px;
-  align-items: center;
-}
-.manifiesto-photo {
-  width: 100%;
-}
-.manifiesto-photo img {
-  width: 100%;
-  height: 100%;
-  max-height: 360px;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 22px 50px rgba(17, 17, 17, 0.09);
-  border: 1px solid rgba(0, 0, 0, 0.03);
-}
-.manifiesto-text {
-  background: transparent;
-  padding: 8px 6px 6px 12px;
-  border-left: 4px solid rgba(111, 75, 216, 0.1);
-  border-radius: 8px;
-}
-.manifiesto-text p {
-  margin: 0;
-  color: #222;
-  font-size: 15.5px;
-  line-height: 1.78;
-}
-.manifiesto-text p::first-letter {
-  float: left;
-  font-size: 30px;
-  line-height: 1;
-  margin-right: 10px;
-  font-weight: 700;
-  color: var(--accent-2);
-  font-family: Georgia, "Times New Roman", serif;
-}
-.manifiesto .subtitle-sep {
-  display: block;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(111, 75, 216, 0.06),
-    transparent
-  );
-  margin: 10px 0 14px;
-}
-
-@media (max-width: 899px) {
-  .manifiesto {
-    padding: 14px;
-  }
-  .manifiesto-grid {
-    grid-template-columns: 1fr;
-  }
-  .manifiesto-photo img {
-    height: 220px;
-    object-fit: cover;
-  }
-  .manifiesto-text {
-    padding-left: 0;
-    border-left: none;
-    margin-top: 8px;
-  }
-  .manifiesto::before {
-    display: none;
-  }
-  .manifiesto-text p::first-letter {
-    font-size: 28px;
-  }
-}
 .section {
   padding: 28px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.03);
@@ -457,129 +303,6 @@ body {
   font-size: 14px;
 }
 
-/* Filter bar for product categories */
-.filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-.filter-btn {
-  background: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  padding: 8px 12px;
-  border-radius: 999px;
-  cursor: pointer;
-  font-weight: 600;
-  color: #222;
-}
-.filter-btn:hover {
-  background: var(--glass);
-}
-.filter-btn.active {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  color: white;
-  border-color: transparent;
-  box-shadow: 0 8px 20px rgba(111, 75, 216, 0.12);
-}
-
-/* Grid of featured products */
-.product-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
-.product-card {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  background: var(--card);
-  padding: 12px;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.08);
-}
-.product-media {
-  width: 96px;
-  height: 96px;
-  flex: 0 0 96px;
-  border-radius: 10px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #fafafa, #f3f3f3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.product-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.product-body h4 {
-  margin: 0 0 6px;
-  font-size: 16px;
-}
-.product-body .muted {
-  margin: 0;
-  color: var(--muted);
-  font-size: 13px;
-}
-.manifiesto-text {
-  white-space: pre-wrap;
-  background: var(--card);
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  line-height: 1.6;
-  color: #222;
-}
-/* Accordion */
-.accordion-item {
-  margin-bottom: 12px;
-}
-.accordion-toggle,
-.sub-toggle {
-  width: 100%;
-  text-align: left;
-  background: transparent;
-  border: 0;
-  padding: 12px 14px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 15px;
-}
-.accordion-toggle {
-  position: relative;
-}
-.accordion-toggle::after {
-  content: "\25BC";
-  position: absolute;
-  right: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 220ms ease;
-  font-size: 12px;
-  color: var(--muted);
-}
-.accordion-toggle.is-open::after {
-  transform: translateY(-50%) rotate(180deg);
-}
-.accordion-toggle:hover,
-.sub-toggle:hover {
-  background: var(--glass);
-}
-.accordion-panel,
-.sub-panel {
-  overflow: hidden;
-  transition: max-height 350ms cubic-bezier(0.2, 0.9, 0.2, 1);
-  max-height: 0;
-  padding: 0 6px;
-}
 .collection-desc {
   padding: 6px 14px;
   color: var(--muted);
@@ -725,103 +448,6 @@ body {
   background: transparent;
 }
 
-.collections-nav {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
-}
-
-/* Nuevo sistema de tabs - Mejorado */
-.collection-tab {
-  /* Mostrar todas las colecciones por defecto (sin sistema de pestañas) */
-  display: block;
-  animation: fadeIn 300ms ease-in-out;
-}
-
-.tab-btn {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--muted);
-  padding: 12px 20px;
-  border-radius: 8px;
-  border: none;
-  font-weight: 600;
-  font-size: 15px;
-  transition: all 250ms cubic-bezier(0.2, 0.9, 0.2, 1);
-  position: relative;
-  background: transparent;
-  cursor: pointer;
-}
-
-.tab-btn::before {
-  content: "";
-  position: absolute;
-  bottom: -23px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  border-radius: 2px;
-  opacity: 0;
-  transition: opacity 250ms ease;
-  pointer-events: none;
-}
-
-.tab-btn:hover {
-  background: rgba(111, 75, 216, 0.06);
-  color: var(--accent-2);
-  transform: translateY(-2px);
-}
-
-.tab-btn.active {
-  color: var(--accent-2);
-  font-weight: 700;
-}
-
-.tab-btn.active::before {
-  opacity: 1;
-}
-
-.collection-link {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--muted);
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(111, 75, 216, 0.08);
-  font-weight: 700;
-  font-size: 14px;
-  transition: background 200ms cubic-bezier(0.2, 0.9, 0.2, 1), color 200ms ease,
-    transform 160ms ease, border-color 200ms ease, box-shadow 200ms ease;
-  position: relative;
-}
-.collection-link::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(111, 75, 216, 0.04), transparent);
-  opacity: 0;
-  transition: opacity 200ms ease;
-  pointer-events: none;
-}
-.collection-link:hover::before {
-  opacity: 1;
-}
-.collection-link:hover {
-  background: rgba(111, 75, 216, 0.08);
-  color: var(--accent-2);
-  transform: translateY(-2px);
-  border-color: rgba(111, 75, 216, 0.12);
-  box-shadow: 0 8px 20px rgba(111, 75, 216, 0.08);
-}
-.collection-link.active {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #fff;
-  border-color: transparent;
-  box-shadow: 0 12px 32px rgba(111, 75, 216, 0.16);
-}
 
 @media (max-width: 899px) {
   .collection-header {
@@ -969,17 +595,6 @@ body {
   margin: 0;
   color: var(--muted);
   font-size: 13px;
-}
-.qr-placeholder {
-  width: 56px;
-  height: 56px;
-  border-radius: 8px;
-  background: linear-gradient(180deg, #fafafa, #f3f3f3);
-  display: inline-block;
-  margin-top: 8px;
-}
-.qr-placeholder:empty {
-  opacity: 0.6;
 }
 
 /* Perfumería: galería de fotos reales y ajustes visuales de tarjetas */
@@ -1506,24 +1121,6 @@ section.collection-section .cards .card .card-media img {
     font-weight: 600;
   }
 
-  /* Collections intro nav */
-  .collections-intro {
-    margin-bottom: 12px;
-    text-align: center;
-  }
-  .collections-nav {
-    display: inline-flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  .collection-link {
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--accent), var(--accent-2));
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-  }
 
   /* Alquimia section (new layout) */
   .alquimia-gallery {
@@ -1817,22 +1414,6 @@ section.collection-section .cards .card .card-media img {
   transform: translateY(-50%) scale(1.05);
 }
 
-/* Manifiesto centering */
-.manifiesto-grid {
-  align-items: center;
-}
-.manifiesto-text {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto;
-}
-.manifiesto-photo img {
-  width: 100%;
-  max-width: 360px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
 
 /* Footer - final refined (overrides earlier snippets for cohesive look) */
 .site-footer {
@@ -1902,6 +1483,74 @@ section.collection-section .cards .card .card-media img {
 }
 
 @media (max-width: 640px) {
+  /* Mobile contrast improvements */
+  :root {
+    --muted: #5a5a5a;
+  }
+
+  /* Mobile typography improvements */
+  body {
+    font-size: 16.5px;
+    line-height: 1.65;
+  }
+
+  p {
+    margin-bottom: 18px;
+  }
+
+  .card-body p {
+    line-height: 1.65;
+  }
+
+  /* Mobile tap target improvements */
+  .main-nav .nav-toggle {
+    padding: 12px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .nav-list a {
+    padding: 12px 14px;
+    min-height: 44px;
+  }
+
+  /* Mobile visual hierarchy improvements */
+  .section h2,
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  /* Mobile spacing improvements */
+  .section {
+    padding: 36px 0;
+  }
+
+  .acerca-text.card,
+  .card {
+    padding: 22px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .alquimia-product-card {
+    padding: 28px;
+  }
+
+  .consultoria-card {
+    padding: 28px;
+  }
+
+  .musica-card {
+    padding: 18px;
+  }
+
+  .collections-list {
+    gap: 24px;
+  }
+
   .footer-inner {
     flex-direction: column;
     text-align: center;
@@ -2057,7 +1706,7 @@ section.collection-section .cards .card .card-media img {
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 20px;
 }
 
 .contact-btn {
@@ -2065,6 +1714,8 @@ section.collection-section .cards .card .card-media img {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  flex: 1;
+  text-align: center;
 
   padding: 10px 16px;
   border-radius: 10px;
