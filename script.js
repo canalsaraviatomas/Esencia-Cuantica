@@ -44,19 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Sticky Header Shadow on Scroll
   // ============================================
   const header = document.getElementById("site-header");
-  let lastScroll = 0;
   
   if (header) {
     window.addEventListener("scroll", () => {
-      const currentScroll = window.scrollY;
-      
-      if (currentScroll > 10) {
+      if (window.scrollY > 10) {
         header.classList.add("scrolled");
       } else {
         header.classList.remove("scrolled");
       }
-      
-      lastScroll = currentScroll;
     }, { passive: true });
   }
 
