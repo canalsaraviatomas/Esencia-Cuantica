@@ -20,20 +20,20 @@
   --radius: 14px;
   --radius-sm: 10px;
   --max-width: 1200px;
-  
+
   /* Typography */
   --font-body: "Times New Roman", Georgia, serif;
   --font-heading: Georgia, "Times New Roman", serif;
   --type-base: 16px;
   --type-scale: 1.125;
-  
+
   /* Spacing */
   --space-xs: 8px;
   --space-sm: 12px;
   --space-md: 18px;
   --space-lg: 28px;
   --space-xl: 40px;
-  
+
   /* Transitions */
   --transition: 280ms cubic-bezier(0.2, 0.9, 0.2, 1);
   --transition-fast: 160ms ease;
@@ -73,7 +73,12 @@ body {
 /* ============================================
    TYPOGRAPHY
    ============================================ */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -161,7 +166,8 @@ a {
   );
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transition: box-shadow var(--transition-fast), background var(--transition-fast);
+  transition: box-shadow var(--transition-fast),
+    background var(--transition-fast);
 }
 
 .site-header.scrolled {
@@ -279,7 +285,7 @@ a {
   .nav-toggle {
     display: none !important;
   }
-  
+
   .nav-list {
     position: static;
     display: flex;
@@ -291,7 +297,7 @@ a {
     min-width: auto;
     border-radius: 0;
   }
-  
+
   .nav-list a {
     padding: var(--space-sm) var(--space-sm);
     min-height: auto;
@@ -381,11 +387,11 @@ a {
     min-height: 500px;
     padding: 80px 0 70px;
   }
-  
+
   .hero-brand {
     font-size: 42px;
   }
-  
+
   .hero-tagline {
     font-size: 19px;
   }
@@ -470,7 +476,7 @@ a {
   .real-photos-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .real-photos-grid img {
     height: 180px;
   }
@@ -616,13 +622,13 @@ a {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   .subgroup > h4 {
     width: 100%;
     flex-basis: 100%;
     margin-bottom: var(--space-sm);
   }
-  
+
   .subgroup-header {
     flex-shrink: 0;
     margin: var(--space-md) var(--space-lg) var(--space-lg) 0;
@@ -630,7 +636,7 @@ a {
     height: 240px;
     align-self: center;
   }
-  
+
   .subgroup > p {
     flex: 1;
     min-width: 300px;
@@ -638,7 +644,7 @@ a {
     max-width: none;
     align-self: center;
   }
-  
+
   .subgroup > .cards {
     width: 100%;
     flex-basis: 100%;
@@ -688,6 +694,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   transition: transform 300ms ease;
   display: block;
 }
@@ -762,6 +769,10 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
+#perfumeria .collection-section .cards .card .card-media img {
+  object-position: center 30%;
+}
+
 #perfumeria .collection-section .cards .card .card-body {
   padding: var(--space-md);
   text-align: left;
@@ -789,7 +800,7 @@ a {
   #perfumeria .collection-section .cards .card .card-media {
     height: 200px;
   }
-  
+
   #perfumeria .collection-section .cards .card .card-body {
     text-align: center;
   }
@@ -800,7 +811,7 @@ a {
     grid-template-columns: 1fr;
     gap: var(--space-md);
   }
-  
+
   #perfumeria .collection-section .cards .card .card-media {
     height: 200px;
   }
@@ -943,7 +954,11 @@ a {
 }
 
 .musica-link-spotify {
-  background: linear-gradient(135deg, rgba(30, 215, 96, 0.1), rgba(30, 215, 96, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(30, 215, 96, 0.1),
+    rgba(30, 215, 96, 0.05)
+  );
   color: #1db954;
   border-color: rgba(30, 215, 96, 0.2);
 }
@@ -998,24 +1013,24 @@ a {
     max-width: 500px;
     margin: 0 auto;
   }
-  
+
   .musica-section-title {
     font-size: 26px;
   }
-  
+
   .musica-section-subtitle {
     font-size: 17px;
   }
-  
+
   .musica-section-content p {
     font-size: 15.5px;
   }
-  
+
   .musica-tecnologia-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
   }
-  
+
   .musica-tecnologia-item {
     padding: var(--space-lg);
   }
@@ -1025,32 +1040,32 @@ a {
   .musica-hero-mobile {
     display: none;
   }
-  
+
   .musica-hero-desktop {
     display: block;
     max-width: 100%;
     position: sticky;
     top: calc(var(--space-lg) + 60px);
   }
-  
+
   .musica-layout {
     grid-template-columns: 1fr 400px;
     gap: var(--space-xl);
     align-items: start;
   }
-  
+
   .musica-sections-left {
     gap: var(--space-xl);
   }
-  
+
   .musica-sections {
     gap: var(--space-xl);
   }
-  
+
   .musica-section-card {
     padding: var(--space-xl);
   }
-  
+
   .musica-section-title {
     font-size: 28px;
   }
@@ -1165,11 +1180,11 @@ a {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
   }
-  
+
   .alquimia-gallery img {
     height: 240px;
   }
-  
+
   .alquimia-products-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
@@ -1256,29 +1271,29 @@ a {
   .consultoria-card {
     flex-direction: column;
   }
-  
+
   .consultoria-body {
     display: contents;
   }
-  
+
   .consultoria-body h4 {
     order: 1;
     margin-bottom: var(--space-md);
     width: 100%;
   }
-  
+
   .consultoria-body p {
     order: 3;
     margin-top: var(--space-sm);
     width: 100%;
   }
-  
+
   .consultoria-photo {
     order: 2;
     width: 100%;
     margin: 0 0 var(--space-md) 0;
   }
-  
+
   .consultoria-photo img {
     width: 100%;
     max-width: 300px;
@@ -1345,43 +1360,43 @@ a {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
   }
-  
+
   .consultoria-card {
     padding: var(--space-lg);
     flex-direction: row;
     align-items: flex-start;
     text-align: left;
   }
-  
+
   .consultoria-body {
     display: flex;
     flex-direction: column;
     order: 0;
     text-align: left;
   }
-  
+
   .consultoria-body h4 {
     order: 0;
     margin-bottom: var(--space-sm);
   }
-  
+
   .consultoria-body p {
     order: 0;
     margin-top: 0;
   }
-  
+
   .consultoria-photo {
     order: 0;
     width: auto;
     margin: 0 var(--space-md) 0 0;
   }
-  
+
   .consultoria-photo img {
     width: 160px;
     height: 160px;
     max-width: none;
   }
-  
+
   .consultoria-contacts {
     flex-direction: row;
     gap: var(--space-sm);
@@ -1393,11 +1408,11 @@ a {
   .consultoria-card {
     padding: var(--space-md);
   }
-  
+
   .consultoria-body p {
     font-size: 14px;
   }
-  
+
   .contact-btn {
     padding: var(--space-sm) var(--space-sm);
     font-size: 12px;
@@ -1472,7 +1487,7 @@ a {
     text-align: center;
     gap: var(--space-sm);
   }
-  
+
   .footer-nav {
     justify-content: center;
   }
@@ -1492,7 +1507,7 @@ a {
     opacity: 0;
     transform: translateY(10px);
   }
-  
+
   .fade-in.visible {
     opacity: 1;
     transform: none;
@@ -1506,28 +1521,28 @@ a {
   .section-title {
     font-size: 24px;
   }
-  
+
   .section-subtitle,
   .section-sub {
     font-size: 15px;
   }
-  
+
   .collection-header-body h3 {
     font-size: 24px;
   }
-  
+
   .subgroup > h4 {
     font-size: 18px;
   }
-  
+
   .hero-brand {
     font-size: 28px;
   }
-  
+
   .hero-tagline {
     font-size: 15px;
   }
-  
+
   .subgroup-header {
     height: 200px;
   }
@@ -1537,16 +1552,16 @@ a {
   .collection-header-body h3 {
     font-size: 32px;
   }
-  
+
   .collection-header-body .collection-desc {
     font-size: 16px;
   }
-  
+
   .subgroup-header {
     max-width: 400px;
     height: 260px;
   }
-  
+
   .collection-subgroups {
     gap: 56px;
   }
