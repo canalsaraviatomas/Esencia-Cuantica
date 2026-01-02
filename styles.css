@@ -830,12 +830,15 @@ a {
   overflow: hidden;
   box-shadow: var(--shadow);
   border: 1px solid rgba(0, 0, 0, 0.04);
-  transition: box-shadow var(--transition), transform var(--transition);
 }
 
-.musica-hero-image:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-4px);
+.musica-hero-mobile {
+  display: block;
+  margin: var(--space-md) auto var(--space-lg);
+}
+
+.musica-hero-desktop {
+  display: none;
 }
 
 .musica-hero-image img {
@@ -1019,6 +1022,17 @@ a {
 }
 
 @media (min-width: 1024px) {
+  .musica-hero-mobile {
+    display: none;
+  }
+  
+  .musica-hero-desktop {
+    display: block;
+    max-width: 100%;
+    position: sticky;
+    top: calc(var(--space-lg) + 60px);
+  }
+  
   .musica-layout {
     grid-template-columns: 1fr 400px;
     gap: var(--space-xl);
@@ -1027,12 +1041,6 @@ a {
   
   .musica-sections-left {
     gap: var(--space-xl);
-  }
-  
-  .musica-hero-image {
-    max-width: 100%;
-    position: sticky;
-    top: calc(var(--space-lg) + 60px);
   }
   
   .musica-sections {
