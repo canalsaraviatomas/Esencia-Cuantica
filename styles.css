@@ -971,6 +971,38 @@ a {
   box-shadow: 0 6px 16px rgba(30, 215, 96, 0.3);
 }
 
+.musica-link-youtube {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 0, 0.1),
+    rgba(255, 0, 0, 0.05)
+  );
+  color: #ff0000;
+  border-color: rgba(255, 0, 0, 0.2);
+}
+
+.musica-link-youtube:hover,
+.musica-link-youtube:focus {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  color: #fff;
+  border-color: #ff0000;
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.3);
+}
+
+.discografia-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .discografia-buttons {
+    flex-direction: row;
+    gap: var(--space-md);
+  }
+}
+
 /* Tecnología de armonización - Grid interno */
 .musica-tecnologia-grid {
   display: grid;
